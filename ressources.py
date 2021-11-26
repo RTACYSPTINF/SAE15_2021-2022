@@ -1,5 +1,5 @@
 """
-Département : numéro du département.
+Département : numéro du département RT
 Slug : identifiant unique en minuscule, sans accent et sans espace. Peut servir pour faire les URLs d’un site web.
 Nom : nom en majuscule et sans accent.
 Nom simple : nom en minuscule, sans accent et avec les tirets remplacés par des espaces. Peut être utilisé pour faire une recherche lorsqu’on ne sait pas si le nom de ville possède un tiret ou des espaces (ex : “Saint-Étienne” possède un tiret comme séparateur, tandis que “Le Havre” possède un espace comme séparateur)
