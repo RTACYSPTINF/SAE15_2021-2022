@@ -418,6 +418,7 @@ if __name__ == "__main__":
     latParis = a['PARIS'][1]
     lonParis = a['PARIS'][0]
     dist_Paris_Marseille = mpu.haversine_distance((latMarseille, lonMarseille), (latParis, lonParis))
+    print("coucou")
 
 
 
