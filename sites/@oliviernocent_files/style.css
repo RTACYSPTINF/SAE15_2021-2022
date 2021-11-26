@@ -1,0 +1,226 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+section.section {
+  flex: 1 0 auto;
+}
+
+footer.footer {
+  flex-shrink: 0;
+}
+
+.container {
+  max-width: 900px !important;
+  font-size: 1.2rem;
+}
+
+.modal-card-body ul {
+  line-height: 2rem;
+  margin-bottom: 20px;
+}
+
+kbd {
+  color: white;
+  background-color: black;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+dt {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.embed16x9 {
+  position: relative;
+  padding-bottom: 56.25%;
+  /*16:9*/
+  height: 0;
+  margin-bottom: 16px;
+}
+
+.embed4x3 {
+  position: relative;
+  padding-bottom: 75%;
+  /*4:3*/
+  height: 0;
+  margin-bottom: 16px;
+}
+
+.embed16x9 iframe, .embed16x9 video, .embed4x3 iframe, .embed4x3 video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  max-width: 100%;
+  width: auto;
+}
+
+.content figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+summary {
+  /* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+  cursor: pointer;
+}
+
+summary:focus {
+  outline: none;
+}
+
+/*
+ * Chrome hack: audio tag overlaps content
+ */
+
+audio {
+  height: 4rem;
+}
+
+/*
+ * Code snippets (PRISM.js)
+ */
+
+@media screen and (min-width: 820px) {
+  .container {
+    text-align: justify;
+  }
+  pre>code::before {
+    float: right;
+    color: #888888;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-style: oblique;
+  }
+  pre>code.language-html::before {
+    content: "HTML";
+  }
+  pre>code.language-svg::before {
+    content: "SVG";
+  }
+  pre>code.language-css::before {
+    content: "CSS";
+  }
+  pre>code.language-javascript::before {
+    content: "JavaScript";
+  }
+  pre>code.language-python::before {
+    content: "Python";
+  }
+}
+
+.rendered {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #E1E1E8;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 19px;
+}
+
+.rendered>.icon {
+  float: right;
+  color: #888888;
+}
+
+/*
+ * Exercise styling
+ */
+
+.exercise {
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+  border-left-color: hsl(171, 100%, 41%)!important;
+}
+
+.exercise h4 {
+  margin-top: 0;
+  margin-bottom: .25rem;
+  color: hsl(171, 100%, 41%)!important;
+}
+
+.exercise h5 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise p:last-child {
+  margin-bottom: 0;
+}
+
+.exercise code {
+  border-radius: .25rem;
+}
+
+.exercise+.exercise {
+  margin-top: -.25rem;
+}
+
+.firstletter::first-letter {
+  float: left;
+  font-size: 2.5em;
+}
+
+.firstline::first-line {
+  font-size: 1.25em;
+  font-variant: small-caps;
+}
+
+/*
+ *  Link style (example in chapter "Hypertext")
+ */
+
+a.example:link {
+  text-decoration: none;
+  color: green;
+}
+
+a.example:visited {
+  color: blue;
+}
+
+a.example:hover {
+  text-decoration: underline;
+}
+
+a.example:active {
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+}
+
+input.formex1:required {
+  font-weight: bolder;
+}
+
+input.formex1:optional {
+  font-style: italic;
+}
+
+input.formex2:valid {
+  background-color: rgb(246, 254, 249);
+  border-color: rgb(35, 209, 96);
+  color: rgb(14, 48, 26);
+}
+
+input.formex2:invalid {
+  background-color: rgb(255, 245, 247);
+  border-color: rgb(255, 56, 96);
+  ;
+  color: rgb(205, 9, 48);
+}

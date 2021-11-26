@@ -1,0 +1,3989 @@
+<!DOCTYPE html>
+<!-- saved from url=(0146)https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="pageKey" content="d_learning_course_video_guest">
+          <meta name="linkedin:pageTag" content="locked_video">
+        <meta name="locale" content="fr_FR">
+        <meta id="config" data-app-version="2.0.923" data-call-tree-id="taYPJm3puRYwlo2g4SoAAA==" data-multiproduct-name="learning-guest-frontend" data-service-name="learning-guest-frontend" data-browser-id="21e4bcb2-dc59-4cc6-89fe-8f2a50c73692" data-enable-core-web-tracking="" data-enable-page-view-heartbeat-tracking="">
+        <link rel="canonical" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python">
+<!----><!---->
+<!---->
+<!---->
+<!---->
+<!---->
+          <script>
+            function getDfd() {let yFn,nFn;const p=new Promise(function(y, n){yFn=y;nFn=n;});p.resolve=yFn;p.reject=nFn;return p;}
+            window.lazyloader = getDfd();
+            window.tracking = getDfd();
+            window.impressionTracking = getDfd();
+            window.ingraphTracking = getDfd();
+            window.appDetection = getDfd();
+            window.pemTracking = getDfd();
+          </script>
+
+<!---->
+        
+        
+    
+
+    <link rel="icon" href="https://static-exp1.licdn.com/sc/h/444zstxv7s91nepfm5et6ofge">
+    <title>Comment visualiser les données sur une carte avec la librairie Folium de Python ? - Tutoriel vidéo Python | LinkedIn Learning, anciennement Lynda.com</title>
+    <meta name="robots" content="noarchive">
+    <meta name="description" content="Découvrez comment visualiser, sur une carte, les données relatives aux points de ventes. Pour cela, vous utiliserez la librairie Folium de Python.">
+    <meta property="og:site_name" content="LinkedIn">
+    <meta name="twitter:site" content="@LI_Learning">
+    <meta name="twitter:card" content="summary">
+    <meta name="litmsProfileName" content="learning-guest-frontend">
+    <meta property="og:title" content="Comment visualiser les données sur une carte avec la librairie Folium de Python ? - Tutoriel vidéo Python | LinkedIn Learning, anciennement Lynda.com">
+    <meta name="twitter:title" content="Comment visualiser les données sur une carte avec la librairie Folium de Python ? - Tutoriel vidéo Python | LinkedIn Learning, anciennement Lynda.com">
+    <meta property="og:description" content="Découvrez comment visualiser, sur une carte, les données relatives aux points de ventes. Pour cela, vous utiliserez la librairie Folium de Python.">
+    <meta name="twitter:description" content="Découvrez comment visualiser, sur une carte, les données relatives aux points de ventes. Pour cela, vous utiliserez la librairie Folium de Python.">
+      <meta property="og:image" content="https://media-exp1.licdn.com/dms/image/C4D0DAQEuxSrzCScIDQ/learning-public-crop_675_1200/0/1576563362610?e=1637683200&amp;v=beta&amp;t=84frlcqmUvypEqf5S_-ajH0N-wMSyQKjih2rjjqHyes">
+      <meta name="twitter:image" content="https://media-exp1.licdn.com/dms/image/C4D0DAQEuxSrzCScIDQ/learning-public-crop_675_1200/0/1576563362610?e=1637683200&amp;v=beta&amp;t=84frlcqmUvypEqf5S_-ajH0N-wMSyQKjih2rjjqHyes">
+    <meta property="og:url" content="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python">
+    <meta property="og:type" content="website">
+      <meta name="clientSideIngraphs" content="1" data-gauge-metric-endpoint="/learning-guest/api/ingraphs/gauge" data-counter-metric-endpoint="/learning-guest/api/ingraphs/counter">
+  
+        <link rel="stylesheet" href="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/dn4k5esz2ctb40prv3dzcwopn">
+
+        
+    
+    <script type="application/ld+json">
+      {"@context":"http://schema.org/","@type":"VideoObject","name":"Comment visualiser les données sur une carte avec la librairie Folium de Python ? - Python pour la data science : Série","author":{"@type":"Person","name":"Omar Souissi","url":"https://fr.linkedin.com/learning/instructors/omar-souissi"},"thumbnailUrl":"https://media-exp1.licdn.com/dms/image/C4D0DAQEuxSrzCScIDQ/learning-public-crop_675_1200/0/1576563362610?e=1637683200&v=beta&t=84frlcqmUvypEqf5S_-ajH0N-wMSyQKjih2rjjqHyes","description":"Grâce aux astuces d'Omar Souissi, apprenez à tirer parti de la science des données (data science) et du langage Python.","duration":"PT5M24S","datePublished":"2019-12-17","uploadDate":"2019-12-17","requiresSubscription":true,"isAccessibleForFree":false,"contentUrl":"https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python"}
+    </script>
+  
+  
+
+      
+      <script type="text/javascript" src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/utag.js.téléchargement" async=""></script></head>
+      <body dir="ltr" class="" style="padding-top: 0px; margin-top: 68px;">
+          
+          
+    
+
+      <a href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python?upsellOrderOrigin=default_guest_learning&amp;trk=default_guest_learning#main-content" class="skip-link">Passer au contenu principal</a>
+  
+          
+      
+    
+<!---->  
+  
+
+        
+        
+    
+    <header class="header global-alert-offset sticky-header show" style="top: 0px;">
+      
+        
+
+    
+    
+    
+
+    <nav class="nav nav--minified-mobile" aria-label="Principal">
+      <a href="https://fr.linkedin.com/learning?trk=learning-course_nav-header-logo&amp;upsellOrderOrigin=default_guest_learning" class="nav__logo-link" data-tracking-control-name="learning-course_nav-header-logo" data-tracking-will-navigate="">
+          
+              
+            
+
+    
+    
+
+    <div class="learning-logo">
+      <icon class="learning-logo__inbug onload lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" height="27" width="27" viewBox="0 0 27 27" focusable="false" class="lazy-loaded">
+  <g fill="currentColor">
+    <path d="M1.91 0h22.363a1.91 1.91 0 011.909 1.91v22.363a1.91 1.91 0 01-1.91 1.909H1.91A1.91 1.91 0 010 24.272V1.91A1.91 1.91 0 011.91 0zm1.908 22.364h3.818V9.818H3.818zM8.182 5.727a2.455 2.455 0 10-4.91 0 2.455 2.455 0 004.91 0zm2.182 4.091v12.546h3.818v-6.077c0-2.037.75-3.332 2.553-3.332 1.3 0 1.81 1.201 1.81 3.332v6.077h3.819v-6.93c0-3.74-.895-5.78-4.667-5.78-1.967 0-3.277.921-3.788 1.946V9.818z" fill="currentColor" fill-rule="evenodd"></path>
+  </g>
+</svg></icon>
+      <span class="learning-logo__text" aria-hidden="true">LinkedIn Learning</span>
+      <span class="sr-only">LinkedIn Learning</span>
+    </div>
+  
+          
+          
+      </a>
+
+        
+
+    
+    
+    
+    
+
+    <section class="search-bar search-bar--minified-mobile" data-current-search-type="LEARNING">
+      <button class="search-bar__placeholder show-on-mobile hide-on-desktop" data-tracking-control-name="learning-course_search-switcher-opener">
+        <div class="search-bar__full-placeholder">
+<!----><!---->              Chercher des compétences, sujets ou logiciels
+        </div>
+        <span class="sr-only">Étendre la recherche</span>
+      </button>
+      
+      
+        
+
+    
+    
+    
+    
+
+    <div class="switcher-tabs__trigger-and-tabs">
+      <button aria-expanded="false" class="switcher-tabs__placeholder hide-on-mobile" data-tracking-control-name="learning-course_switcher-tabs-placeholder">
+        <span class="switcher-tabs__placeholder-text">
+              E-learning
+            </span>
+        <icon class="switcher-tabs__caret-down-filled onload lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" class="artdeco-icon lazy-loaded" focusable="false">
+  <path d="M5,9h14l-6.2,6.7C12.6,15.9,12.3,16,12,16c-0.3,0-0.6-0.1-0.8-0.3L5,9z" fill="currentColor"></path>
+</svg></icon>
+      </button>
+
+      <div class="switcher-tabs hide-on-desktop hide-on-mobile">
+        <ul class="switcher-tabs__list">
+          <li class="switcher-tabs__tab ">
+            <button aria-selected="false" class="switcher-tabs__button" data-switcher-type="JOBS" data-tracking-control-name="learning-course_switcher-tabs-jobs-search-switcher" role="tab" type="button">
+              Offres d’emploi
+            </button>
+          </li>
+          <li class="switcher-tabs__tab ">
+            <button aria-selected="false" class="switcher-tabs__button" data-switcher-type="PEOPLE" data-tracking-control-name="learning-course_switcher-tabs-people-search-switcher" role="tab" type="button">
+              Personnes
+            </button>
+          </li>
+          <li class="switcher-tabs__tab switcher-tabs__tab--active">
+            <button aria-selected="true" class="switcher-tabs__button" data-switcher-type="LEARNING" data-tracking-control-name="learning-course_switcher-tabs-learning-search-switcher" role="tab" type="button">
+              E-learning
+            </button>
+          </li>
+        </ul>
+
+        <button aria-label="Fermer" class="switcher-tabs__cancel-btn hide-on-desktop" data-tracking-control-name="learning-course_switcher-tabs-cancel-search-switcher" type="button">
+          <icon class="switcher-tabs__cancel-icon onload lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+      </div>
+    </div>
+  
+
+        
+
+    
+    
+    
+    
+
+    
+
+    
+
+    <section class="base-search-bar" data-searchbar-type="PEOPLE">
+      <form class="base-search-bar__form" role="search" action="https://fr.linkedin.com/pub/dir" data-tracking-control-name="learning-course_people-search-bar_base-search-bar-form">
+        
+          
+      
+    
+
+    <section class="dismissable-input search-input">
+      <input aria-label="Prénom " name="firstName" class="dismissable-input__input" placeholder="Prénom " autocomplete="on" data-tracking-control-name="learning-course_people-search-bar_first-name_dismissable-input" maxlength="500" type="search">
+        <button class="dismissable-input__button" data-tracking-control-name="learning-course_people-search-bar_first-name_dismissable-input-clear" type="button" disabled="">
+          <label class="screen-reader-text">Ignorer</label>
+          <icon class="dismissable-input__button-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+
+      
+    </section>
+  
+  
+          
+      
+    
+
+    <section class="dismissable-input search-input">
+      <input aria-label="Nom " name="lastName" class="dismissable-input__input" placeholder="Nom " autocomplete="on" data-tracking-control-name="learning-course_people-search-bar_last-name_dismissable-input" maxlength="500" type="search">
+        <button class="dismissable-input__button" data-tracking-control-name="learning-course_people-search-bar_last-name_dismissable-input-clear" type="button" disabled="">
+          <label class="screen-reader-text">Ignorer</label>
+          <icon class="dismissable-input__button-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+
+      
+    </section>
+  
+  
+      
+        <input name="trk" value="learning-course_people-search-bar_search-submit" type="hidden">
+        <button class="base-search-bar__submit-btn" aria-label="Rechercher" data-tracking-control-name="learning-course_people-search-bar_base-search-bar-search-submit" type="submit">
+          <icon class="base-search-bar__search-icon onload lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="lazy-loaded">
+  <path d="M21,19.67l-5.44-5.44a7,7,0,1,0-1.33,1.33L19.67,21ZM10,15.13A5.13,5.13,0,1,1,15.13,10,5.13,5.13,0,0,1,10,15.13Z" class="large-icon" style="fill: currentColor; color: #7a8b98;" id="search-icon-large"></path>
+</svg></icon>
+        </button>
+      </form>
+    </section>
+  
+  
+
+        
+
+    
+    
+    
+
+    
+
+    
+
+    <section class="base-search-bar" data-searchbar-type="JOBS">
+      <form class="base-search-bar__form" role="search" action="https://fr.linkedin.com/jobs/search" data-tracking-control-name="learning-course_jobs-search-bar_base-search-bar-form">
+        
+        
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <section class="dismissable-input typeahead-input keywords-typeahead-input" role="combobox" aria-owns="job-search-bar-keywords-typeahead-list" aria-haspopup="listbox" aria-expanded="false">
+      <input aria-autocomplete="list" aria-controls="job-search-bar-keywords-typeahead-list" aria-label="Rechercher des emplois ou des entreprises" name="keywords" class="dismissable-input__input" placeholder="Rechercher des emplois ou des entreprises" autocomplete="off" data-tracking-control-name="learning-course_dismissable-input" maxlength="500" type="search">
+        <button class="dismissable-input__button" data-tracking-control-name="learning-course_dismissable-input-clear" type="button" disabled="">
+          <label class="screen-reader-text">Ignorer</label>
+          <icon class="dismissable-input__button-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+
+      
+<!---->      <div class="typeahead-input__dropdown">
+        <template class="typeahead-item-template"></template>
+
+        <ul class="typeahead-input__dropdown-list" id="job-search-bar-keywords-typeahead-list" role="listbox"></ul>
+      </div>
+<!---->    
+    </section>
+  
+  
+        
+
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <section class="dismissable-input typeahead-input location-typeahead-input" role="combobox" aria-owns="job-search-bar-location-typeahead-list" aria-haspopup="listbox" aria-expanded="false">
+      <input aria-autocomplete="list" aria-controls="job-search-bar-location-typeahead-list" aria-label="Lieu" name="location" class="dismissable-input__input" value="Chambéry" placeholder="Lieu" autocomplete="off" data-tracking-control-name="learning-course_dismissable-input" maxlength="500" type="search">
+        <button class="dismissable-input__button dismissable-input__button--show" data-tracking-control-name="learning-course_dismissable-input-clear" type="button">
+          <label class="screen-reader-text">Ignorer</label>
+          <icon class="dismissable-input__button-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+
+      
+<!---->      <div class="typeahead-input__dropdown">
+        <template class="typeahead-item-template"></template>
+
+        <ul class="typeahead-input__dropdown-list" id="job-search-bar-location-typeahead-list" role="listbox"></ul>
+      </div>
+<!---->    
+    </section>
+  
+  
+        <input name="geoId" value="100233610" type="hidden">
+      
+        <input name="trk" value="learning-course_jobs-search-bar_search-submit" type="hidden">
+        <button class="base-search-bar__submit-btn" aria-label="Rechercher" data-tracking-control-name="learning-course_jobs-search-bar_base-search-bar-search-submit" type="submit">
+          <icon class="base-search-bar__search-icon onload lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="lazy-loaded">
+  <path d="M21,19.67l-5.44-5.44a7,7,0,1,0-1.33,1.33L19.67,21ZM10,15.13A5.13,5.13,0,1,1,15.13,10,5.13,5.13,0,0,1,10,15.13Z" class="large-icon" style="fill: currentColor; color: #7a8b98;" id="search-icon-large"></path>
+</svg></icon>
+        </button>
+      </form>
+    </section>
+  
+  
+
+        
+    
+    
+
+    
+
+    
+
+    <section class="base-search-bar" data-searchbar-type="LEARNING">
+      <form class="base-search-bar__form" role="search" action="https://fr.linkedin.com/learning/search" data-tracking-control-name="learning-course_learning-search-bar_base-search-bar-form">
+        
+        
+      
+    
+
+    <section class="dismissable-input search-input">
+      <input aria-label="Chercher des compétences, sujets ou logiciels" name="keywords" class="dismissable-input__input" placeholder="Chercher des compétences, sujets ou logiciels" autocomplete="on" data-tracking-control-name="learning-course_learning-search-bar_keywords_dismissable-input" maxlength="500" type="search">
+        <button class="dismissable-input__button" data-tracking-control-name="learning-course_learning-search-bar_keywords_dismissable-input-clear" type="button" disabled="">
+          <label class="screen-reader-text">Ignorer</label>
+          <icon class="dismissable-input__button-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+
+      
+    </section>
+  
+  
+        <input class="nav__search-uoo" name="upsellOrderOrigin" type="hidden" value="default_guest_learning">
+        
+      
+        <input name="trk" value="learning-course_learning-search-bar_search-submit" type="hidden">
+        <button class="base-search-bar__submit-btn" aria-label="Rechercher" data-tracking-control-name="learning-course_learning-search-bar_base-search-bar-search-submit" type="submit">
+          <icon class="base-search-bar__search-icon onload lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="lazy-loaded">
+  <path d="M21,19.67l-5.44-5.44a7,7,0,1,0-1.33,1.33L19.67,21ZM10,15.13A5.13,5.13,0,1,1,15.13,10,5.13,5.13,0,0,1,10,15.13Z" class="large-icon" style="fill: currentColor; color: #7a8b98;" id="search-icon-large"></path>
+</svg></icon>
+        </button>
+      </form>
+    </section>
+  
+  
+        <div aria-live="polite" class="search-bar__live-text sr-only" role="status"></div>
+      
+  
+    </section>
+  
+
+      
+
+      <div class="nav__cta-container">
+          
+          <a class="nav__button-tertiary" href="http://fr.linkedin.com/learning/subscription/products?courseSlug=python-pour-la-data-science-serie&amp;destRedirectURL=https%3A%2F%2Ffr%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie%2Fcomment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python&amp;upsellTrk=lil_upsell_nav_subscription&amp;session_redirect=https%3A%2F%2Ffr.linkedin.com%2Flearning%2Fpython-pour-la-data-science-serie&amp;trk=learning-course_nav-header-join&amp;upsellOrderOrigin=default_guest_learning&amp;upsellTrackingId=Sgzf7yseRVupAoiE8Mmdbw%3D%3D&amp;contextUrn=urn%3Ali%3AlyndaCourse%3A2929756&amp;lipi=urn%3Ali%3Apage%3Ad_learning_course_video_guest_jsbeacon%3Bn04Umm8MQded32i8R8ouEg" data-tracking-control-name="lil_upsell_nav_subscription" data-tracking-impression-name="lil_upsell_nav_subscription" data-test-live-nav-primary-cta="" data-tracking-will-navigate="" data-tracking-has-impressed="true">
+          Démarrer mon essai gratuit
+        </a>
+
+            
+            <a class="nav__button-secondary" href="https://www.linkedin.com/learning-login/?redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie&amp;fromSignIn=true&amp;session_redirect=https%3A%2F%2Ffr.linkedin.com%2Flearning%2Fpython-pour-la-data-science-serie&amp;trk=learning-course_nav-header-signin&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_nav-header-signin" data-tracking-will-navigate="">S’identifier</a>
+
+          <a aria-label="S’identifier" class="nav__link-person" data-tracking-control-name="learning-course_nav-header-signin" data-tracking-will-navigate="" href="https://www.linkedin.com/learning-login/?redirect=https%3A%2F%2Fwww%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie&amp;fromSignIn=true&amp;session_redirect=https%3A%2F%2Ffr.linkedin.com%2Flearning%2Fpython-pour-la-data-science-serie&amp;trk=learning-course_nav-header-signin&amp;upsellOrderOrigin=default_guest_learning">
+            
+      <img class="artdeco-entity-image artdeco-entity-image--circle-1 artdeco-entity-image--ghost lazy-loaded" data-ghost-classes="artdeco-entity-image--ghost" data-ghost-url="https://static-exp1.licdn.com/sc/h/244xhbkr7g40x6bsu4gi6q4ry" alt="" aria-hidden="true" src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/244xhbkr7g40x6bsu4gi6q4ry">
+  
+          </a>
+      </div>
+
+<!---->
+<!---->    </nav>
+  
+      
+    </header>
+
+    
+          
+            
+    
+
+    
+    
+    
+    
+    
+    
+
+<!---->  
+  
+          
+      
+
+      <div class="cta-banner ">
+        
+        
+            
+
+    
+    
+    
+    
+    
+      <div class="enterprise-nav">
+        <div class="enterprise-nav__content-wrapper">
+          <p id="enterprise-nav-solutions" class="enterprise-nav__content" tabindex="-1">
+            Solutions pour&nbsp;:
+          </p>
+            <a href="https://learning.linkedin.com/fr-fr/for-entire-companies?src=li-learning-nav&amp;trk=learning-course_enterprise-nav&amp;upsellOrderOrigin=default_guest_learning" aria-labelledby="enterprise-nav-solutions business-nav-business" class="enterprise-nav__content" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" id="business-nav-business">Entreprise</a>
+            <a href="https://learning.linkedin.com/fr-fr/for-higher-education?src=li-learning-nav&amp;trk=learning-course_enterprise-nav&amp;upsellOrderOrigin=default_guest_learning" aria-labelledby="enterprise-nav-solutions business-nav-education" class="enterprise-nav__content" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" id="business-nav-education">Enseignement supérieur</a>
+            <a href="https://learning.linkedin.com/fr-fr/for-governments?src=li-learning-nav&amp;trk=learning-course_enterprise-nav&amp;upsellOrderOrigin=default_guest_learning" aria-labelledby="enterprise-nav-solutions business-nav-government" class="enterprise-nav__content" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" id="business-nav-government">Administration publique</a>
+            <a href="https://learning.linkedin.com/fr-fr/elearning-solutions-contact-us?veh=lil_upx&amp;src=li-learning-nav&amp;trk=learning-course_enterprise-nav&amp;upsellOrderOrigin=default_guest_learning" aria-labelledby="enterprise-nav-solutions business-nav-buy" class="enterprise-nav__content" data-test-live-enterprise-upsell="true" data-tracking-control-name="learning-course_enterprise-nav" data-tracking-will-navigate="true" id="business-nav-buy">Acheter pour mon équipe</a>
+        </div>
+      </div>
+  
+
+              
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    <div class="banner banner--tan lynda-banner show">
+      <div class="banner__content">
+            
+        <div class="lynda-banner__content">
+          <div class="lynda-banner__migration-logos">
+            <icon class="lynda-banner__icon-logo lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="48px" height="48px" focusable="false" class="lazy-loaded">
+  <g style="fill: currentColor">
+    <lineargradient id="a" gradientUnits="userSpaceOnUse" x1="-80.996" y1="-612.788" x2="-40.996" y2="-612.788" gradientTransform="rotate(90 -336.892 -255.896)">
+      <stop offset="0" stop-color="#ffc300"></stop>
+      <stop offset="1" stop-color="#e7aa01"></stop>
+    </lineargradient>
+    <path d="M0 36V4a4 4 0 014-4h32a4 4 0 014 4v32a4 4 0 01-4 4H4a4 4 0 01-4-4z" fill="url(#a)"></path>
+    <circle cx="20" cy="20" r="15.645" fill="#fff"></circle>
+    <path d="M26.186 5.351A15.628 15.628 0 0020 4.089c-2.156 0-4.22.421-6.186 1.262a15.877 15.877 0 00-5.06 3.404 15.93 15.93 0 00-3.405 5.06 15.64 15.64 0 00-1.26 6.186c0 2.154.421 4.218 1.26 6.185a15.943 15.943 0 003.405 5.058 15.656 15.656 0 005.06 3.405A15.54 15.54 0 0020 35.911c2.156 0 4.205-.419 6.186-1.262a15.97 15.97 0 005.059-3.405 15.94 15.94 0 003.406-5.058 15.6 15.6 0 001.261-6.185c0-2.157-.421-4.206-1.261-6.186a15.628 15.628 0 00-3.406-5.06 15.917 15.917 0 00-5.059-3.404M20 4.74c2.061 0 4.043.406 5.929 1.206a15.076 15.076 0 014.854 3.27 15.185 15.185 0 013.269 4.843 15.072 15.072 0 011.209 5.942c0 1.601-.245 3.161-.732 4.653-.694-.312-1.235-.529-1.656-.612-.095-.284-.285-.569-.542-.867a3.844 3.844 0 00-.896-.732c-.299-.15-.542-.205-.733-.137l-.081-.107h1.207c.6 0 1.099-.177 1.506-.556.502-.476.746-1.196.735-2.173-.029-.961-.259-2.141-.693-3.526a20.151 20.151 0 00-1.98-4.394c-.991-1.6-2.116-2.862-3.366-3.773-1.477-1.07-3.09-1.613-4.84-1.613-1.981-.014-3.569.665-4.75 2.021-.732.828-1.288 1.912-1.681 3.255a1.608 1.608 0 00-.529.259 1.15 1.15 0 00-.352.449H15.2v.351h.598v.014c0 .312.147.583.432.813.041.013.069.04.095.068-.191 1.247-.259 2.605-.205 4.055.042 1.207.124 2.048.231 2.524.178.677.423 1.167.76 1.478.503.475 1.303.72 2.388.72l4.571.011.258.339c-.135.313-.365.611-.693.897a.607.607 0 00-.162.352c-2.129.895-3.308 1.559-3.525 1.979l-1.181 2.119-1.139-5.048-.529.096-.731-.571-2.241.232c-1.436.149-2.331.257-2.684.326-.367.068-.788.244-1.236.516-.136.094-.257.161-.352.23l-.015-.312c-.055-.462-.162-.787-.339-1.003-.163-.203-.514-.408-1.018-.584l-.801-.245-.04.014-.732.269-.367-.351 1.75 8.341a15.666 15.666 0 01-2.346-3.838A15.15 15.15 0 014.74 20c0-2.076.407-4.043 1.207-5.942a15.183 15.183 0 013.27-4.843 15.182 15.182 0 014.843-3.27A15.108 15.108 0 0120 4.74zm5.845 6.929c.056.122.122.273.218.422 0 .028.014.041.026.056h-1.505v.351h1.696c.014.04.04.082.054.121.134.34.067.734-.191 1.154l-.379.516c-.121.203-.135.38-.053.542.038.095.162.231.366.394.123.107.175.272.149.489.433-.111.609-.327.502-.679a.797.797 0 01.054-.583l.122-.244c.014-.027.026-.039.026-.054v-.014c.014 0 .014 0 .014-.015v-.014.014c.23-.38.366-.663.435-.853.013-.068.026-.122.026-.177 0-.163-.082-.327-.256-.462h.488c.446.422.541 1.194.311 2.307.04.649-.055 1.017-.284 1.085-.231.057-.46-.012-.705-.204l.013 6.362 3.227.015.463.623-3.703 2.498-3.461-4.478c.802-.693 1.304-1.129 1.48-1.303.406-.407 1.031-1.099 1.87-2.102-2.182 1.656-3.525 2.577-4.014 2.74l-.487.19a4.177 4.177 0 01-.489.121c-.38.055-.908.015-1.587-.135-.638-.151-1.045-.461-1.222-.936a5.12 5.12 0 01-.149-.651 4.655 4.655 0 00-.161-.664 8.974 8.974 0 00-.381-.719c-.203-.365-.38-.69-.488-.963-.369-.829-.571-1.736-.651-2.753h.054c.407 0 .76-.121 1.045-.339.068-.053.121-.094.163-.149l.258-.787v-.014c.054-.352.298-.543.731-.543s.663.178.733.503c-.013.054-.013.108-.013.176 0 .312.134.583.434.813.285.218.637.339 1.045.339.407 0 .745-.121 1.043-.339.272-.23.42-.501.42-.813v-.014h.557v-.351h-.625a1.172 1.172 0 00-.353-.449 1.707 1.707 0 00-1.043-.338c-.407 0-.76.121-1.045.338-.095.069-.164.15-.233.23a.63.63 0 00-.08-.108c-.201-.217-.473-.326-.841-.326-.353 0-.638.11-.827.326-.043.028-.067.068-.097.108-.055-.08-.134-.148-.229-.23a1.628 1.628 0 00-.801-.327c.556-1.437 1.818-2.956 3.785-4.555.965 2.521 2.484 4.149 4.545 4.852zm-5.303.695c0-.015.014-.055.028-.137.027-.068.121-.176.285-.284a1.35 1.35 0 01.814-.244c.297 0 .57.081.8.244a.697.697 0 01.284.352h-1.614v.339h.285c.027.082.109.122.245.122.149 0 .228-.04.27-.122h.841c-.026.177-.136.313-.31.448a1.45 1.45 0 01-.8.231c-.326 0-.584-.081-.814-.231-.219-.163-.326-.351-.326-.569a.435.435 0 01.012-.149zm7.244 3.975c.121 0 .231.054.311.134a.438.438 0 01.137.312.387.387 0 01-.137.31.385.385 0 01-.311.137.405.405 0 01-.312-.137.424.424 0 01-.123-.31.48.48 0 01.123-.312.472.472 0 01.312-.134zM16.69 12.295v.339h.299c.026.082.108.122.259.122a.3.3 0 00.186-.068.097.097 0 00.055-.054h.911c-.042.177-.151.313-.327.448-.218.15-.488.231-.8.231-.312 0-.569-.081-.8-.231-.217-.163-.326-.351-.326-.569 0-.231.109-.421.326-.57.23-.162.488-.244.8-.244.312 0 .582.081.8.244.15.094.245.216.299.352H16.69zm-.421 10.378h.014-.014l.42.325-7.149 1.355-2.388-2.332.543-.191c.258.055.516.137.786.245.407.15.664.312.788.462.216.257.312.732.271 1.425l-.026.365.284-.229c.597-.502 1.167-.8 1.695-.896.34-.068 1.249-.176 2.7-.326l2.076-.203zm15.044.136l.013-.016v-.013c.258.148.5.352.733.61.189.204.324.407.42.596a.851.851 0 01.108.258c.04.203-.435.691-1.438 1.467a34.94 34.94 0 01-3.092 2.1h-.014l-.894-2.198 4.164-2.804zM26.7 25.52h-.013l-2.035 1.629a17.589 17.589 0 01-.705-2.118c-.19-.772-.217-1.234-.082-1.358a3.47 3.47 0 00.639-.771.32.32 0 01.068-.094c0-.016 0-.016.013-.016l2.102 2.727h.013zm-6.036-7.513c-.297.094-.515.162-.651.176a1.87 1.87 0 01-.61-.014 1.78 1.78 0 01-.421-.095c-.081-.039-.134-.108-.162-.216-.04.19.054.338.298.448.164.081.366.135.61.163.245.012.557-.068.923-.273.367-.201.516-.31.434-.338 0-.001-.149.039-.421.149zm-.204-.246c.286 0 .394-.054.352-.108-.122-.148-.542-.298-1.273-.501l-.272.135-.219-.135c-.135.026-.256.148-.351.393l.298.095.23.163c.122-.041.257-.041.421-.041h.814zm6.783-2.753c.08.08.175.15.285.217-.149-.353-.231-.597-.245-.774-.095.299-.108.489-.04.557zm-9.441.61c.231.313.42.516.598.597.189.095.664.055 1.464-.081l-2.062-.516z"></path>
+  </g>
+</svg></icon>
+            <icon class="lynda-banner__icon-arrow lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11" style="fill: currentColor" focusable="false" class="lazy-loaded">
+  <path d="M9.4 0.5L13 5.5L9.4 10.5H7L9.8 6.5H0V4.5H9.8L7 0.5H9.4Z"></path>
+</svg></icon>
+            <icon class="lynda-banner__icon-logo lynda-banner__icon-logo--inbug lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 48 48" width="48px" height="48px" focusable="false" class="lazy-loaded">
+<rect width="100%" height="100%" rx="3" fill="white"></rect>
+<path d="M44.46 0H3.54C2.60113 0 1.70072 0.372963 1.03684 1.03684C0.372966 1.70072 0 2.60113 0 3.54V44.46C0 45.3989 0.372966 46.2993 1.03684 46.9632C1.70072 47.627 2.60113 48 3.54 48H44.46C45.3989 48 46.2993 47.627 46.9632 46.9632C47.627 46.2993 48 45.3989 48 44.46V3.54C48 2.60113 47.627 1.70072 46.9632 1.03684C46.2993 0.372963 45.3989 0 44.46 0ZM14.6667 40.6667H7.33333V18H14.6667V40.6667ZM11 15.1333C10.184 15.1268 9.38812 14.8788 8.7128 14.4206C8.03748 13.9624 7.51289 13.3146 7.20515 12.5588C6.89741 11.803 6.8203 10.973 6.98353 10.1734C7.14676 9.37381 7.54302 8.64044 8.12239 8.06571C8.70175 7.49098 9.43828 7.10062 10.2391 6.94382C11.04 6.78702 11.8694 6.87079 12.6227 7.18459C13.376 7.49839 14.0196 8.02816 14.4723 8.70715C14.925 9.38613 15.1666 10.1839 15.1667 11C15.173 11.5474 15.0693 12.0905 14.8618 12.597C14.6542 13.1035 14.347 13.5632 13.9584 13.9487C13.5697 14.3343 13.1076 14.6378 12.5994 14.8413C12.0912 15.0448 11.5473 15.1441 11 15.1333ZM40.6667 40.6667H33.3333V28.1467C33.3333 24.4533 31.72 23.3133 29.66 23.3133C27.48 23.3133 25.3333 24.9267 25.3333 28.24V40.6667H18V18H25.0667V21.1733H25.16C25.8866 19.9793 26.9134 18.9964 28.138 18.3227C29.3627 17.649 30.7425 17.3078 32.14 17.3333C36.24 17.3333 40.6667 19.7467 40.6667 26.7467V40.6667Z" fill="currentColor"></path>
+</svg></icon>
+          </div>
+
+          <div class="lynda-banner__text-container">
+            <h2 class="lynda-banner__heading">Lynda.com s’appelle maintenant LinkedIn Learning</h2>
+            <p class="lynda-banner__subheading-container">
+              <span class="lynda-banner__subheading">Tous les <a href="https://fr.linkedin.com/learning/courses?trk=learning-course_lynda-banner&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_lynda-banner" data-tracking-will-navigate="true" class="lynda-banner__link">cours</a> de Lynda.com et ses formateurs expérimentés sont désormais sur LinkedIn Learning.</span>
+              <a class="lynda-banner__link" href="https://fr.linkedin.com/learning/browse?trk=learning-course_lynda-banner&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_lynda-banner" data-tracking-will-navigate="">
+                Voir tous les sujets
+              </a>
+            </p>
+          </div>
+        </div>
+      
+      </div>
+        <button class="banner__dismiss-button" aria-label="Ignorer" data-tracking-control-name="learning-course_lynda-banner_banner">
+          <icon class="banner__dismiss-button-icon lazy-loaded" data-svg-class-name="banner__dismiss-button-icon-svg" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" focusable="false" class="banner__dismiss-button-icon-svg lazy-loaded">
+  <g fill="none" fill-rule="evenodd">
+    <path fill="currentColor" d="M7.90356 9.19393l-3.3763 3.3763-1.29037-1.29037 3.3763-3.3763-3.3763-3.3763 1.29037-1.29037 3.3763 3.3763 3.3763-3.3763 1.29037 1.29037-3.3763 3.3763 3.3763 3.3763-1.29037 1.29037z"></path>
+    <path d="M0 0h16v16H0z"></path>
+  </g>
+</svg></icon>
+        </button>
+    </div>
+  
+  
+
+<!---->
+<!---->          
+      
+      </div>
+
+    <main class="main" id="main-content" role="main">
+      <section class="core-rail">
+        
+        
+            <p class="pre-headline">
+              
+    
+
+    Dans le cours&nbsp;: <a href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie?trk=course_title&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="course_title" data-tracking-will-navigate="true" class="from-the-course__link">Python pour la data science : Série</a>
+  
+            </p>
+
+            
+    
+    
+    
+    
+    
+    
+    
+
+    <section class="top-card">
+      
+
+    <section class="top-card-layout">
+        
+          <section class="top-card__video-wrapper">
+            <div aria-label="Vous vous concentrez maintenant sur la vidéo Comment visualiser les données sur une carte avec la librairie Folium de Python ? dans le cours intitulé Python pour la data science : Série" class="top-card__video" tabindex="0">
+                <span class="sr-only">La vidéo est bloquée.</span>
+                
+
+    
+    
+    
+    
+    
+
+    <div class="hero-upsell">
+      <div class="hero-upsell__text-wrap">
+        <h3 class="hero-upsell__headline">
+          <icon class="lock-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" class="lazy-loaded">
+	<path d="M19 10h-3V6.17A4.12 4.12 0 0012.39 2 4 4 0 008 6v4H5a1 1 0 00-1 1v10a1 1 0 001 1h14a1 1 0 001-1V11a1 1 0 00-1-1zm-9-4.12a2 2 0 014 0V10h-4V5.88zM18 20H6v-8h12v8zm-7-2.87v-2.25a1 1 0 012 0v2.25a1 1 0 01-2 0z" fill="currentColor"></path>
+</svg></icon>
+            Accédez à ce cours grâce à un essai gratuit
+        </h3>
+        <h4 class="hero-upsell__subheadline">
+            Inscrivez-vous aujourd’hui pour accéder à plus de 17 200&nbsp;cours dispensés par des experts.
+                  </h4>
+      </div>
+    </div>
+  
+                <img class="top-card__video-image lazy-loaded" alt="Comment visualiser les données sur une carte avec la librairie Folium de Python ?" src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/1576563362610">
+<!---->            </div>
+          </section>
+        
+
+      <div class="top-card-layout__card">
+          
+
+        <div class="top-card-layout__entity-info-container">
+          <div class="top-card-layout__entity-info">
+              <h1 class="top-card-layout__title">
+                Comment visualiser les données sur une carte avec la librairie Folium de Python ? - Tutoriel <a href="https://fr.linkedin.com/learning/topics/python?trk=video_title_to_software_topic&amp;upsellOrderOrigin=default_guest_learning" data-tracking-will-navigate="true" data-tracking-control-name="video_title_to_software_topic">Python</a>
+                
+              </h1>
+              <h2 class="top-card-layout__headline">
+                  
+          
+    
+
+    Dans le cours&nbsp;: <a href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie?trk=course_title&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="course_title" data-tracking-will-navigate="true" class="from-the-course__link">Python pour la data science : Série</a>
+  
+        
+              </h2>
+
+<!---->
+<!---->
+            <div class="top-card-layout__cta-container">
+                  
+            
+
+    
+    
+
+    <a href="http://fr.linkedin.com/learning/subscription/products?courseSlug=python-pour-la-data-science-serie&amp;destRedirectURL=https%3A%2F%2Ffr%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie%2Fcomment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python&amp;upsellTrk=lil_upsell_course_info_subscription&amp;trk=course_info&amp;upsellOrderOrigin=default_guest_learning&amp;upsellTrackingId=Wnbjto%2FGS3G7LRNRaaWAKg%3D%3D&amp;contextUrn=urn%3Ali%3AlyndaCourse%3A2929756&amp;lipi=urn%3Ali%3Apage%3Ad_learning_course_video_guest_jsbeacon%3Bn04Umm8MQded32i8R8ouEg" data-tracking-control-name="lil_upsell_course_info_subscription" data-tracking-impression-name="lil_upsell_course_info_subscription" data-litms-tracking-control-name="lil_upsell_course_info_subscription" data-tracking-will-navigate="" class="top-card__upsell-link top-card-layout__cta top-card-layout__cta--primary" data-test-live-course-sub-upsell="" data-tracking-has-impressed="true">
+        
+                Démarrer mon mois d’essai gratuit
+              
+    </a>
+  
+        
+
+                
+<!---->        
+            </div>
+          </div>
+
+<!---->        </div>
+
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+<!---->
+
+<!---->      </div>
+    </section>
+  
+    </section>
+  
+          
+      
+
+        <div class="details">
+          
+        
+            
+
+    
+    
+    
+    
+
+    
+    <div class="tabs content-tabs" data-id="course-content-tabs">
+      <ul class="tabs__list" role="tablist">
+        
+<!---->
+          
+    <li class="tab">
+      <button class="tab-button" role="tab" aria-selected="true" data-tracking-control-name="transcripts-tab" id="course-content-tabs_tab-button_0" aria-controls="course-content-tabs_tab-panel_0">
+          
+          Transcriptions
+      </button>
+    </li>
+  
+
+          
+    <li class="tab">
+      <button class="tab-button" role="tab" aria-selected="false" tabindex="-1" data-tracking-control-name="files-tab" id="course-content-tabs_tab-button_1" data-test-live-exercise-files-tab="" aria-controls="course-content-tabs_tab-panel_1">
+          
+          Fichiers d’exercice
+      </button>
+    </li>
+  
+
+          
+    <li class="tab">
+      <button class="tab-button" role="tab" aria-selected="false" tabindex="-1" data-tracking-control-name="offline-tab" id="course-content-tabs_tab-button_2" data-test-live-offline-tab="" aria-controls="course-content-tabs_tab-panel_2">
+          
+          Regarder hors ligne
+      </button>
+    </li>
+  
+      
+      </ul>
+      
+<!---->
+        
+    <div class="tab-panel" tabindex="0" role="tabpanel" id="course-content-tabs_tab-panel_0" aria-labelledby="course-content-tabs_tab-button_0">
+      
+          
+                
+
+    
+    
+
+    
+    <section class="core-section-container transcripts">
+<!---->
+        <h2 class="core-section-container__title">
+          Comment visualiser les données sur une carte avec la librairie Folium de Python ?
+        </h2>
+
+<!---->
+      <div class="core-section-container__content">
+        
+        <div class="transcripts__copy">
+            <span class="transcripts__quotation">“</span>
+            <p>
+                Plusieurs librairies Python permettent la représentation de données géolocalisées. Dans cette vidéo, nous nous intéressons précisément à Folium : une puissante librairie permettant de créer des cartes interactives et utiliser l'analyse visuelle géospatiale. Précisons que données géospatiales signifie qu'il s'agit de données avec une information sur les coordonnées : latitude et longitude, permettant alors une représentation visuelle de l'emplacement des points relatifs aux données. Ainsi, par exemple pour une chaîne de boutiques, il est intéressant de mettre en évidence les tendances, relever le manque de couverture sur certaines zones, etc. N'ayez pas crainte avec tous les avantages que je viens de citer, Folium est bel et bien open source, et c'est ce qui fait la force de Python : une multitude de librairies puissantes et open source. Sans tarder, commençons par charger la librairie Folium, et nous créons de suite une carte en utilisant la fonction Map en précisant en arguments :…
+            </p>
+        </div>
+      
+      </div>
+    </section>
+  
+  
+              
+        
+    </div>
+  
+
+          
+    <div class="tab-panel" tabindex="0" role="tabpanel" hidden="" id="course-content-tabs_tab-panel_1" aria-labelledby="course-content-tabs_tab-button_1">
+      
+            
+                
+
+    
+    
+    
+    
+
+    
+    <section class="core-section-container exercise-files" data-test-live-files-panel="">
+<!---->
+        <h2 class="core-section-container__title">
+          Entraînez-vous tout en suivant la formation avec les fichiers d’exercices.
+        </h2>
+
+<!---->
+      <div class="core-section-container__content">
+        
+        <p class="exercise-files__description">
+          Téléchargez les fichiers utilisés par l’instructeur pour enseigner le cours. Suivez attentivement et apprenez en regardant, en écoutant et en vous entraînant.
+        </p>
+
+        <ul class="exercise-files__list">
+            <li class="exercise-files__file">
+                
+
+    
+    
+
+    <a href="http://fr.linkedin.com/learning/subscription/products?courseSlug=python-pour-la-data-science-serie&amp;destRedirectURL=https%3A%2F%2Ffr%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie%2Fcomment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python&amp;upsellTrk=lil_upsell_exercise_file_subscription&amp;trk=exercise_file&amp;upsellOrderOrigin=default_guest_learning&amp;upsellTrackingId=YOaAVmeuRyq8ZOMGeeQGDQ%3D%3D&amp;contextUrn=urn%3Ali%3AlyndaCourse%3A2929756&amp;lipi=urn%3Ali%3Apage%3Ad_learning_course_video_guest_jsbeacon%3Bn04Umm8MQded32i8R8ouEg" data-tracking-control-name="lil_upsell_exercise_file_subscription" data-tracking-impression-name="lil_upsell_exercise_file_subscription" data-litms-tracking-control-name="lil_upsell_exercise_file_subscription" data-tracking-will-navigate="" class="exercise-files__file-upsell-link" data-test-live-files-sub-upsell="">
+        
+                  <span class="exercise-files__lock-icon-container">
+                    <span class="a11y-text">
+                      Fichier d’exercices&nbsp;: abonnez-vous pour y accéder.
+                    </span>
+                    <icon class="exercise-files__lock-icon lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" focusable="false" class="lazy-loaded">
+	<path d="M19 10h-3V6.17A4.12 4.12 0 0012.39 2 4 4 0 008 6v4H5a1 1 0 00-1 1v10a1 1 0 001 1h14a1 1 0 001-1V11a1 1 0 00-1-1zm-9-4.12a2 2 0 014 0V10h-4V5.88zM18 20H6v-8h12v8zm-7-2.87v-2.25a1 1 0 012 0v2.25a1 1 0 01-2 0z" fill="currentColor"></path>
+</svg></icon>
+                  </span>
+                  <span class="exercise-files__file-name">
+                    fichiers_d_exercice_python_serie.zip
+                  </span>
+                
+    </a>
+  
+            </li>
+        </ul>
+
+        
+
+    
+    
+
+    <div class="footer-upsell-link">
+      <span class="footer-upsell-link__description">
+        Téléchargez les fichiers d’exercices pour ce cours.
+      </span>
+        
+
+    
+    
+
+    <a href="http://fr.linkedin.com/learning/subscription/products?courseSlug=python-pour-la-data-science-serie&amp;destRedirectURL=https%3A%2F%2Ffr%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie%2Fcomment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python&amp;upsellTrk=lil_upsell_exercise_file_subscription&amp;trk=exercise_file&amp;upsellOrderOrigin=default_guest_learning&amp;upsellTrackingId=CcZXir7bSPeGkshhWyC1oQ%3D%3D&amp;contextUrn=urn%3Ali%3AlyndaCourse%3A2929756&amp;lipi=urn%3Ali%3Apage%3Ad_learning_course_video_guest_jsbeacon%3Bn04Umm8MQded32i8R8ouEg" data-tracking-control-name="lil_upsell_exercise_file_subscription" data-tracking-impression-name="lil_upsell_exercise_file_subscription" data-litms-tracking-control-name="lil_upsell_exercise_file_subscription" data-tracking-will-navigate="" class="exercise-files__upsell-link" data-test-live-files-footer-sub-upsell="">
+        
+          Commencez votre essai gratuit aujourd’hui.
+        
+    </a>
+  
+    </div>
+  
+      
+      </div>
+    </section>
+  
+  
+              
+          
+    </div>
+  
+
+          
+    <div class="tab-panel" tabindex="0" role="tabpanel" hidden="" id="course-content-tabs_tab-panel_2" aria-labelledby="course-content-tabs_tab-button_2">
+      
+            
+                
+
+    
+    
+    
+    
+    
+
+    
+    <section class="core-section-container offline">
+<!---->
+        <h2 class="core-section-container__title">
+          Téléchargez des cours et suivez des formations même en déplacement
+        </h2>
+
+<!---->
+      <div class="core-section-container__content">
+        
+        <p class="offline__description">
+          Regardez des cours sur votre appareil mobile sans connexion à internet. Téléchargez des cours avec votre appli LinkedIn Learning iOS ou Android.
+        </p>
+
+        <div class="offline__link-container">
+          
+  <a class="offline__link" href="https://itunes.apple.com/fr/app/apple-store/id1084807225?ls=1&amp;pt=10746&amp;mt=8&amp;ct=learning_course_tab_viewoffline&amp;trk=apple_app_store&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="apple_app_store" data-tracking-will-navigate="" rel="noopener" target="_blank">
+    <img alt="Télécharger sur l’App Store" class="offline__image lazy-loaded" src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/emczv26hz24woii2j4aleyry">
+  </a>
+
+          
+  <a class="offline__link" href="https://play.google.com/store/apps/details?id=com.linkedin.android.learning&amp;referrer=utm_source=linkedinlearning&amp;utm_medium=mobileWeb&amp;utm_campaign=learning_guest&amp;hl=fr&amp;ct=learning_course_tab_viewoffline&amp;trk=google_play_store&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="google_play_store" data-tracking-will-navigate="" rel="noopener" target="_blank">
+    <img alt="Télécharger sur Google Play" class="offline__image lazy-loaded" src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/535kqf5rsexfx0lucb3t6palb">
+  </a>
+
+        </div>
+
+          
+
+    
+    
+
+    <div class="footer-upsell-link">
+      <span class="footer-upsell-link__description">
+        Regardez ce cours où vous voulez, quand vous voulez.
+      </span>
+        
+
+    
+    
+
+    <a href="http://fr.linkedin.com/learning/subscription/products?courseSlug=python-pour-la-data-science-serie&amp;destRedirectURL=https%3A%2F%2Ffr%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie%2Fcomment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python&amp;upsellTrk=lil_upsell_offline_viewing_subscription&amp;trk=offline_viewing&amp;upsellOrderOrigin=default_guest_learning&amp;upsellTrackingId=j0iu3KvhR6WylmD4HuZMVw%3D%3D&amp;contextUrn=urn%3Ali%3AlyndaCourse%3A2929756&amp;lipi=urn%3Ali%3Apage%3Ad_learning_course_video_guest_jsbeacon%3Bn04Umm8MQded32i8R8ouEg" data-tracking-control-name="lil_upsell_offline_viewing_subscription" data-tracking-impression-name="lil_upsell_offline_viewing_subscription" data-litms-tracking-control-name="lil_upsell_offline_viewing_subscription" data-tracking-will-navigate="" class="offline__upsell-link" data-test-live-offline-footer-sub-upsell="">
+        
+          Commencez votre essai gratuit aujourd’hui.
+        
+    </a>
+  
+    </div>
+  
+      
+      </div>
+    </section>
+  
+  
+              
+          
+    </div>
+  
+      
+    </div>
+  
+  
+          
+      
+        </div>
+      </section>
+      <section class="right-rail">
+        
+        
+            
+    
+
+      
+    <section class="table-of-contents">
+        <h2 class="table-of-contents__header">
+          Table des matières
+        </h2>
+
+      <ul class="table-of-contents__list">
+        
+          
+    <li class="toc-section">
+      
+
+    
+    
+
+      <div class="show-more-less">
+            <button class="show-more-less__button show-more-less__more-button
+                          " aria-expanded="false" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Introduction
+        
+              <icon class="show-more-less__button--chevron lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" preserveAspectRatio="xMinYMin meet" focusable="false" class="lazy-loaded"><path d="M8 9l5.93-4L15 6.54l-6.15 4.2a1.5 1.5 0 01-1.69 0L1 6.54 2.07 5z" fill="currentColor"></path></svg></icon>
+            </button>
+
+            <button class="show-more-less__button show-more-less__less-button
+                          show-more-less__button--hide" aria-expanded="false" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Introduction
+        
+              <icon class="show-more-less__button--chevron lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" preserveAspectRatio="xMinYMin meet" focusable="false" class="lazy-loaded"><path d="M8 7l-5.9 4L1 9.5l6.2-4.2c.5-.3 1.2-.3 1.7 0L15 9.5 13.9 11 8 7z" fill="currentColor"></path></svg></icon>
+            </button>
+
+        <ul data-max-num-to-show="0" class="show-more-less__list
+            show-more-less__list--hide-after-0
+            show-more-less__list--hide-after-0-with-animations">
+          
+          
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/bienvenue-dans-python-pour-la-data-science-serie?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Bienvenue dans « Python pour la data science : Série »
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        55&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+            
+        
+        </ul>
+
+<!---->      </div>
+
+  
+    </li>
+  
+          
+    <li class="toc-section">
+      
+
+    
+    
+
+      <div class="show-more-less">
+            <button class="show-more-less__button show-more-less__more-button
+                          show-more-less__button--hide" aria-expanded="true" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Déjà parues
+        
+              <icon class="show-more-less__button--chevron lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" preserveAspectRatio="xMinYMin meet" focusable="false" class="lazy-loaded"><path d="M8 9l5.93-4L15 6.54l-6.15 4.2a1.5 1.5 0 01-1.69 0L1 6.54 2.07 5z" fill="currentColor"></path></svg></icon>
+            </button>
+
+            <button class="show-more-less__button show-more-less__less-button
+                          " aria-expanded="true" data-tracking-control-name="learning-course_toc-section_show_more">
+                
+            Déjà parues
+        
+              <icon class="show-more-less__button--chevron lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" preserveAspectRatio="xMinYMin meet" focusable="false" class="lazy-loaded"><path d="M8 7l-5.9 4L1 9.5l6.2-4.2c.5-.3 1.2-.3 1.7 0L15 9.5 13.9 11 8 7z" fill="currentColor"></path></svg></icon>
+            </button>
+
+        <ul data-max-num-to-show="0" class="show-more-less__list
+            
+            show-more-less__list--hide-after-0-with-animations" data-impression-id="learning-course_toc-section_show-more-less">
+          
+          
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-mettre-la-data-science-au-service-du-marketing?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment mettre la data science au service du marketing ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 27&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-publier-des-donnees-et-des-graphiques-dans-excel?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment publier des données et des graphiques dans Excel ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 27&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-publier-les-resultats-dans-excel?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment publier les résultats dans Excel ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 3&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-realiser-des-heatmaps-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment réaliser des heatmaps avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 53&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-analyser-les-sentiments-des-clients?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment analyser les sentiments des clients ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 20&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-combiner-seo-et-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment combiner SEO et Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 51&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-manipuler-les-expressions-regulieres-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment manipuler les expressions régulières avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 13&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-effectuer-la-mise-a-l-echelle-des-donnees-avec-la-librairie-scikit-learn?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment effectuer la mise à l'échelle des données avec la librairie scikit-learn ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 6&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item toc-item--active">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment visualiser les données sur une carte avec la librairie Folium de Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        5&nbsp;m 24&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-traiter-les-donnees-massives-en-associant-spark-a-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment traiter les données massives en associant Spark à Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 46&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-analyser-la-stationnarite-des-series-temporelles?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment analyser la stationnarité des séries temporelles ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 3&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-tirer-parti-de-la-reconnaissance-vocale?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment tirer parti de la reconnaissance vocale ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 51&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-utiliser-l-environnement-google-colab?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment utiliser l'environnement Google Colab ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 39&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-detecter-des-objets-avec-opencv?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment détecter des objets avec OpenCV ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 18&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-faire-du-web-scraping?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment faire du web scraping ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 24&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-explorer-un-fichier-xml?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment explorer un fichier XML ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 51&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-se-servir-du-module-selenium?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment se servir du module Selenium ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 39&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-visualiser-un-arbre-de-decision-avec-python-en-utilisant-graphviz?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment visualiser un arbre de décision avec Python en utilisant Graphviz ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 7&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-utiliser-la-vectorisation-pour-accelerer-vos-algorithmes-de-machine-learning?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment utiliser la vectorisation pour accélérer vos algorithmes de machine learning ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 3&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-trouver-les-valeurs-vecteurs-propres-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment trouver les valeurs/vecteurs propres avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 38&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-expliquer-le-reinforcement-learning?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment expliquer le reinforcement learning ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 20&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-comprendre-l-algorithme-de-descente-du-gradient-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment comprendre l'algorithme de descente du gradient avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 54&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-un-reseau-de-neurones-avec-numpy?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer un réseau de neurones avec NumPy ? 
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 52&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-le-deep-learning-avec-keras?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer le deep learning avec Keras ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 34&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-faire-du-reinforcement-learning-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment faire du reinforcement learning avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 37&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-le-deep-learning-avec-pytorch?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer le deep learning avec PyTorch ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 50&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-concevoir-un-chatbot-avec-python-et-la-librairie-nltk?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment concevoir un chatbot avec Python et la librairie NLTK ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        5&nbsp;m 16&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-utiliser-l-analyse-des-sentiments-et-deployer-des-applications-avec-les-librairies-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment utiliser l'analyse des sentiments et déployer des applications avec les librairies Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 45&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-vos-applications-en-creant-un-executable-sous-windows?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer vos applications en créant un exécutable sous Windows ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 1&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-optimiser-vos-algorithmes-de-machine-learning-en-utilisant-la-librairie-dask?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment optimiser vos algorithmes de machine learning en utilisant la librairie Dask ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 35&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-changer-ses-habitudes-grace-au-machine-learning-automatise?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment changer ses habitudes grâce au machine learning automatisé ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 58&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-developper-des-applications-avancees-nlp-avec-la-libraire-spacy?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment développer des applications avancées NLP avec la libraire spaCy ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 3&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-des-algorithmes-de-machine-learning-avec-peu-de-code-avec-pycaret?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer des algorithmes de machine learning avec peu de code avec PyCaret ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        4&nbsp;m 24&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-creer-un-nuage-de-mots-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment créer un nuage de mots avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 28&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-faire-du-word2vec-avec-la-librairie-gensim-de-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment faire du Word2vec avec la librairie Gensim de Python ? 
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 12&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-mieux-comprendre-les-predictions-avec-la-librairie-eli5?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment mieux comprendre les prédictions avec la librairie ELI5 ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-utiliser-python-a-partir-d-excel-avec-pyxll?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment utiliser Python à partir d'Excel avec PyXLL ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 45&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-developper-une-application-blockchain-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment développer une application blockchain avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 40&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-automatiser-des-rapports-excel-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment automatiser des rapports Excel avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 30&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-tirer-profit-de-la-librairie-collections-de-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment tirer profit de la librairie Collections de Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 40&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-analyser-des-documents-xbrl-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment analyser des documents XBRL avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 52&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-les-reseaux-antagonistes-generatifs?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer les réseaux antagonistes génératifs ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 51&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-rapidement-des-applications-de-data-science-avec-la-librairie-streamlit?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer rapidement des applications de data science avec la librairie Streamlit ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 29&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-utiliser-tensorflow-2-0-avec-gpu-dans-l-environnement-google-colab?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment utiliser TensorFlow 2.0 avec GPU dans l'environnement Google Colab ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 55&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-transformer-un-texte-au-format-pdf-en-audio?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment transformer un texte au format PDF en audio ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 28&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-explorer-et-visualiser-des-donnees-massives-avec-la-librairie-vaex-de-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment explorer et visualiser des données massives avec la librairie Vaex de Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 30&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-tirer-profit-de-python-avec-power-bi?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment tirer profit de Python avec Power BI ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 34&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-creer-une-notification-sur-le-bureau-windows-avec-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment créer une notification sur le bureau Windows avec Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 32&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-deployer-une-application-machine-learning-avec-tkinter?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment déployer une application machine learning avec Tkinter ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        2&nbsp;m 20&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-transformer-une-video-en-audio-en-moins-de-5-lignes-de-code?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment transformer une vidéo en audio en moins de 5 lignes de code ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        1&nbsp;m 36&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/comment-se-creer-des-opportunites-en-tant-que-data-scientist-maitrisant-le-langage-python?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--unlocked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--unlocked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" width="24px" height="24px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--unlocked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M22.6,11.4L6,1.9v20.2l16.6-9.5c0.4-0.2,0.5-0.6,0.3-1C22.9,11.5,22.7,11.4,22.6,11.4z M8,18.8V5.2L20,12L8,18.8z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Comment se créer des opportunités en tant que data scientist maîtrisant le langage Python ?
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        3&nbsp;m 34&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+                
+
+    <li class="toc-item">
+      <a data-tracking-control-name="learning-course_tocItem" data-tracking-will-navigate="" href="https://fr.linkedin.com/learning/python-pour-la-data-science-serie/conclure-sur-python-pour-la-data-science?autoplay=true&amp;trk=learning-course_tocItem&amp;upsellOrderOrigin=default_guest_learning" class="toc-item__link">
+        
+                    <icon class="table-of-contents__item-status table-of-contents__item-status--locked lazy-loaded" data-svg-class-name="table-of-contents__item-status-svg--locked" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" width="16px" height="16px" version="1.1" focusable="false" class="table-of-contents__item-status-svg--locked lazy-loaded">
+  <g style="fill: currentColor;">
+    <path d="M12,7H11V4A3,3,0,0,0,5,4V7H4A1,1,0,0,0,3,8v6a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V8A1,1,0,0,0,12,7ZM7,3.88a1,1,0,0,1,2,0V7H7V3.88ZM11,13H5V9h6v4Z"></path>
+  </g>
+</svg></icon>
+                  <div class="table-of-contents__item-details">
+                    <div class="table-of-contents__item-title">
+                      Conclure sur Python pour la data science
+                    </div>
+                    <div class="table-of-contents__item-duration">
+                      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        39&nbsp;s
+
+                    </div>
+                  </div>
+                
+      </a>
+    </li>
+  
+            
+        
+        </ul>
+
+<!---->      </div>
+
+  
+    </li>
+  
+      
+      </ul>
+    </section>
+  
+  
+          
+      
+      </section>
+    </main>
+
+      <div class="pre-footer ">
+        
+        
+
+                  
+
+    
+    
+    
+
+    <div class="upsell-banner footer__upsell-link">
+      <div class="upsell-banner__content">
+        <h3 class="upsell-banner__headline">
+          Commencez à vous former dès aujourd’hui.
+        </h3>
+        <p class="upsell-banner__copy">
+          Maîtrisez les compétences en technologie, en créativité et en business les plus recherchées.
+        </p>
+          
+
+    
+    
+
+    <a href="http://fr.linkedin.com/learning/subscription/products?courseSlug=python-pour-la-data-science-serie&amp;destRedirectURL=https%3A%2F%2Ffr%2Elinkedin%2Ecom%2Flearning%2Fpython-pour-la-data-science-serie%2Fcomment-visualiser-les-donnees-sur-une-carte-avec-la-librairie-folium-de-python&amp;upsellTrk=lil_upsell_banner_subscription&amp;trk=banner&amp;upsellOrderOrigin=default_guest_learning&amp;upsellTrackingId=rratZvt7Qe2foc2G%2BGn1fQ%3D%3D&amp;contextUrn=urn%3Ali%3AlyndaCourse%3A2929756&amp;lipi=urn%3Ali%3Apage%3Ad_learning_course_video_guest_jsbeacon%3Bn04Umm8MQded32i8R8ouEg" data-tracking-control-name="lil_upsell_banner_subscription" data-tracking-impression-name="lil_upsell_banner_subscription" data-litms-tracking-control-name="lil_upsell_banner_subscription" data-tracking-will-navigate="" class="upsell-banner__cta" data-test-live-footer-banner-sub-upsell="" data-tracking-has-impressed="true">
+        Démarrer mon mois gratuit
+    </a>
+  
+      </div>
+    </div>
+  
+                
+
+            
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    <section class="linkster linkster--gray browse-map">
+      <div class="linkster__container">
+          
+        
+
+
+    
+
+      <div class="link-column">
+          <h3 class="link-column__title">
+            Parcourez les sujets de business
+          </h3>
+          <ul class="link-column__list">
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/leadership-et-developpement-professionnel?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Leadership et développement professionnel
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/marketing-3?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Marketing
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/outils-et-logiciels-bureautiques?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Outils et logiciels bureautiques
+                </a>
+              </li>
+          </ul>
+
+            <a class="link-column__general-link" aria-label="Voir tous les cours de business" href="https://fr.linkedin.com/learning/topics/business-2?trk=learning-course_browsemap_general-link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_general-link" data-tracking-will-navigate="">
+                Tout voir
+            </a>
+      </div>
+  
+        
+
+
+    
+
+      <div class="link-column">
+          <h3 class="link-column__title">
+            Parcourez les sujets de créativité
+          </h3>
+          <ul class="link-column__list">
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/3d-animation-3?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  3D &amp; Animation
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/architecture-et-design-industriel?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Architecture et design industriel
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/design-illustration-2?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Design &amp; Illustration
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/design-web-et-ux?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Design web et UX
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/retouche-d-images-photographie-2?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Retouche d'images &amp; Photographie
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/video-audio-2?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Vidéo &amp; Audio
+                </a>
+              </li>
+          </ul>
+
+            <a class="link-column__general-link" aria-label="Voir tous les cours de créativité" href="https://fr.linkedin.com/learning/topics/creativite?trk=learning-course_browsemap_general-link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_general-link" data-tracking-will-navigate="">
+                Tout voir
+            </a>
+      </div>
+  
+        
+
+
+    
+
+      <div class="link-column">
+          <h3 class="link-column__title">
+            Parcourez les sujets de technologie
+          </h3>
+          <ul class="link-column__list">
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/developpement-logiciel?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Développement logiciel
+                </a>
+              </li>
+              <li class="link-column__item">
+                
+                
+                <a class="link-column__link" href="https://fr.linkedin.com/learning/topics/operations-et-securite-informatiques?trk=learning-course_browsemap_link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_link" data-tracking-will-navigate="">
+                  Opérations et sécurité informatiques
+                </a>
+              </li>
+          </ul>
+
+            <a class="link-column__general-link" aria-label="Voir tous les cours de technologie" href="https://fr.linkedin.com/learning/topics/technologie?trk=learning-course_browsemap_general-link&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="learning-course_browsemap_general-link" data-tracking-will-navigate="">
+                Tout voir
+            </a>
+      </div>
+  
+    
+      </div>
+    </section>
+  
+  
+          
+      
+      </div>
+
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+
+    <footer class="li-footer ">
+      <ul class="li-footer__list">
+        <li class="li-footer__item">
+          <span class="sr-only">LinkedIn</span>
+          <icon class="li-footer__copy-logo lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 56 14" preserveAspectRatio="xMinYMin meet" version="1.1" fill="CurrentColor" focusable="false" class="lazy-loaded">
+    <g class="inbug" fill-rule="evenodd">
+      <path d="M14,1.25 L14,12.75 C14,13.44 13.44,14 12.75,14 L1.25,14 C0.56,14 0,13.44 0,12.75 L0,1.25 C0,0.56 0.56,0 1.25,0 L12.75,0 C13.44,0 14,0.56 14,1.25" class="bug-text-color" fill="#FFFFFF" transform="translate(42.000000, 0.000000)"></path>
+      <path d="M56,1.25 L56,12.75 C56,13.44 55.44,14 54.75,14 L43.25,14 C42.56,14 42,13.44 42,12.75 L42,1.25 C42,0.56 42.56,0 43.25,0 L54.75,0 C55.44,0 56,0.56 56,1.25 Z M47,5 L48.85,5 L48.85,6.016 L48.893,6.016 C49.259,5.541 50.018,4.938 51.25,4.938 C53.125,4.938 54,5.808 54,8 L54,12 L52,12 L52,8.75 C52,7.313 51.672,6.875 50.632,6.875 C49.5,6.875 49,7.75 49,9 L49,12 L47,12 L47,5 Z M44,12 L46,12 L46,5 L44,5 L44,12 Z M46.335,3 C46.335,3.737 45.737,4.335 45,4.335 C44.263,4.335 43.665,3.737 43.665,3 C43.665,2.263 44.263,1.665 45,1.665 C45.737,1.665 46.335,2.263 46.335,3 Z" class="background"></path>
+    </g>
+    <g class="linkedin-text">
+      <path d="M40,12 L38.107,12 L38.107,11.1 L38.077,11.1 C37.847,11.518 37.125,12.062 36.167,12.062 C34.174,12.062 33,10.521 33,8.5 C33,6.479 34.291,4.938 36.2,4.938 C36.971,4.938 37.687,5.332 37.97,5.698 L38,5.698 L38,2 L40,2 L40,12 Z M36.475,6.75 C35.517,6.75 34.875,7.49 34.875,8.5 C34.875,9.51 35.529,10.25 36.475,10.25 C37.422,10.25 38.125,9.609 38.125,8.5 C38.125,7.406 37.433,6.75 36.475,6.75 L36.475,6.75 Z"></path>
+      <path d="M31.7628,10.8217 C31.0968,11.5887 29.9308,12.0627 28.4998,12.0627 C26.3388,12.0627 24.9998,10.6867 24.9998,8.4477 C24.9998,6.3937 26.4328,4.9377 28.6578,4.9377 C30.6758,4.9377 31.9998,6.3497 31.9998,8.6527 C31.9998,8.8457 31.9708,8.9997 31.9708,8.9997 L26.8228,8.9997 L26.8348,9.1487 C26.9538,9.8197 27.6008,10.5797 28.6358,10.5797 C29.6528,10.5797 30.2068,10.1567 30.4718,9.8587 L31.7628,10.8217 Z M30.2268,7.9047 C30.2268,7.0627 29.5848,6.4297 28.6508,6.4297 C27.6058,6.4297 26.9368,7.0597 26.8728,7.9047 L30.2268,7.9047 Z"></path>
+      <polygon points="18 2 20 2 20 7.882 22.546 5 25 5 21.9 8.199 24.889 12 22.546 12 20 8.515 20 12 18 12"></polygon>
+      <path d="M10,5 L11.85,5 L11.85,5.906 L11.893,5.906 C12.283,5.434 13.031,4.938 14.14,4.938 C16.266,4.938 17,6.094 17,8.285 L17,12 L15,12 L15,8.73 C15,7.943 14.821,6.75 13.659,6.75 C12.482,6.75 12,7.844 12,8.73 L12,12 L10,12 L10,5 Z"></path>
+      <path d="M7,12 L9,12 L9,5 L7,5 L7,12 Z M8,1.75 C8.659,1.75 9.25,2.341 9.25,3 C9.25,3.659 8.659,4.25 8,4.25 C7.34,4.25 6.75,3.659 6.75,3 C6.75,2.341 7.34,1.75 8,1.75 L8,1.75 Z"></path>
+      <polygon points="0 2 2 2 2 10 6 10 6 12 0 12"></polygon>
+  </g>
+</svg></icon>
+          <span class="li-footer__copy-text">© 2021</span>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://about.linkedin.com/?trk=d_learning_course_video_guest_footer-about&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-about" data-tracking-will-navigate="" class="li-footer__item-link">
+            À propos
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/accessibility?trk=d_learning_course_video_guest_footer-accessibility&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-accessibility" data-tracking-will-navigate="" class="li-footer__item-link">
+            Accessibilité
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/legal/user-agreement?trk=d_learning_course_video_guest_footer-user-agreement&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-user-agreement" data-tracking-will-navigate="" class="li-footer__item-link">
+            Conditions générales d’utilisation de LinkedIn
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/legal/privacy-policy?trk=d_learning_course_video_guest_footer-privacy-policy&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-privacy-policy" data-tracking-will-navigate="" class="li-footer__item-link">
+            Politique de confidentialité
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/legal/cookie-policy?trk=d_learning_course_video_guest_footer-cookie-policy&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-cookie-policy" data-tracking-will-navigate="" class="li-footer__item-link">
+            Politique relative aux cookies
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/legal/copyright-policy?trk=d_learning_course_video_guest_footer-copyright-policy&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-copyright-policy" data-tracking-will-navigate="" class="li-footer__item-link">
+            Politique de copyright
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://brand.linkedin.com/policies?trk=d_learning_course_video_guest_footer-brand-policy&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-brand-policy" data-tracking-will-navigate="" class="li-footer__item-link">
+            Politique de la marque
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/psettings/guest-controls?trk=d_learning_course_video_guest_footer-guest-controls&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-guest-controls" data-tracking-will-navigate="" class="li-footer__item-link">
+            Réglages invités
+          </a>
+        </li>
+        <li class="li-footer__item">
+          <a href="https://www.linkedin.com/legal/professional-community-policies?trk=d_learning_course_video_guest_footer-community-guide&amp;upsellOrderOrigin=default_guest_learning" data-tracking-control-name="d_learning_course_video_guest_footer-community-guide" data-tracking-will-navigate="" class="li-footer__item-link">
+            Directives de la communauté 
+          </a>
+        </li>
+          
+
+          <li class="li-footer__item">
+              
+
+    
+    
+
+    
+
+    
+
+    <div class="collapsible-dropdown collapsible-dropdown--footer collapsible-dropdown--up language-selector">
+<!---->
+        <ul class="collapsible-dropdown__list hidden" role="menu" tabindex="-1">
+          
+          <li aria-label="العربية (Arabe)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="العربية (Arabe)" class="language-selector__link " data-tracking-control-name="language-selector-ar_AE" data-locale="ar_AE" lang="ar_AE">
+                العربية (Arabe)
+            </button>
+          </li>
+          <li aria-label="Čeština (Tchèque)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Čeština (Tchèque)" class="language-selector__link " data-tracking-control-name="language-selector-cs_CZ" data-locale="cs_CZ" lang="cs_CZ">
+                Čeština (Tchèque)
+            </button>
+          </li>
+          <li aria-label="Dansk (Danois)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Dansk (Danois)" class="language-selector__link " data-tracking-control-name="language-selector-da_DK" data-locale="da_DK" lang="da_DK">
+                Dansk (Danois)
+            </button>
+          </li>
+          <li aria-label="Deutsch (Allemand)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Deutsch (Allemand)" class="language-selector__link " data-tracking-control-name="language-selector-de_DE" data-locale="de_DE" lang="de_DE">
+                Deutsch (Allemand)
+            </button>
+          </li>
+          <li aria-label="English (Anglais)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="English (Anglais)" class="language-selector__link " data-tracking-control-name="language-selector-en_US" data-locale="en_US" lang="en_US">
+                English (Anglais)
+            </button>
+          </li>
+          <li aria-label="Español (Espagnol)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Español (Espagnol)" class="language-selector__link " data-tracking-control-name="language-selector-es_ES" data-locale="es_ES" lang="es_ES">
+                Español (Espagnol)
+            </button>
+          </li>
+          <li aria-label="Français (Français) sélectionné" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Français (Français) sélectionné" class="language-selector__link language-selector__link--selected" data-tracking-control-name="language-selector-fr_FR" data-locale="fr_FR" lang="fr_FR">
+                <strong>Français (Français)</strong>
+            </button>
+          </li>
+          <li aria-label="Bahasa Indonesia (Indonésien)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Bahasa Indonesia (Indonésien)" class="language-selector__link " data-tracking-control-name="language-selector-in_ID" data-locale="in_ID" lang="in_ID">
+                Bahasa Indonesia (Indonésien)
+            </button>
+          </li>
+          <li aria-label="Italiano (Italien)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Italiano (Italien)" class="language-selector__link " data-tracking-control-name="language-selector-it_IT" data-locale="it_IT" lang="it_IT">
+                Italiano (Italien)
+            </button>
+          </li>
+          <li aria-label="日本語 (Japonais)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="日本語 (Japonais)" class="language-selector__link " data-tracking-control-name="language-selector-ja_JP" data-locale="ja_JP" lang="ja_JP">
+                日本語 (Japonais)
+            </button>
+          </li>
+          <li aria-label="한국어 (Coréen)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="한국어 (Coréen)" class="language-selector__link " data-tracking-control-name="language-selector-ko_KR" data-locale="ko_KR" lang="ko_KR">
+                한국어 (Coréen)
+            </button>
+          </li>
+          <li aria-label="Bahasa Malaysia (Malaisien)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Bahasa Malaysia (Malaisien)" class="language-selector__link " data-tracking-control-name="language-selector-ms_MY" data-locale="ms_MY" lang="ms_MY">
+                Bahasa Malaysia (Malaisien)
+            </button>
+          </li>
+          <li aria-label="Nederlands (Néerlandais)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Nederlands (Néerlandais)" class="language-selector__link " data-tracking-control-name="language-selector-nl_NL" data-locale="nl_NL" lang="nl_NL">
+                Nederlands (Néerlandais)
+            </button>
+          </li>
+          <li aria-label="Norsk (Norvégien)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Norsk (Norvégien)" class="language-selector__link " data-tracking-control-name="language-selector-no_NO" data-locale="no_NO" lang="no_NO">
+                Norsk (Norvégien)
+            </button>
+          </li>
+          <li aria-label="Polski (Polonais)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Polski (Polonais)" class="language-selector__link " data-tracking-control-name="language-selector-pl_PL" data-locale="pl_PL" lang="pl_PL">
+                Polski (Polonais)
+            </button>
+          </li>
+          <li aria-label="Português (Portugais)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Português (Portugais)" class="language-selector__link " data-tracking-control-name="language-selector-pt_BR" data-locale="pt_BR" lang="pt_BR">
+                Português (Portugais)
+            </button>
+          </li>
+          <li aria-label="Română (Roumain)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Română (Roumain)" class="language-selector__link " data-tracking-control-name="language-selector-ro_RO" data-locale="ro_RO" lang="ro_RO">
+                Română (Roumain)
+            </button>
+          </li>
+          <li aria-label="Русский (Russe)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Русский (Russe)" class="language-selector__link " data-tracking-control-name="language-selector-ru_RU" data-locale="ru_RU" lang="ru_RU">
+                Русский (Russe)
+            </button>
+          </li>
+          <li aria-label="Svenska (Suédois)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Svenska (Suédois)" class="language-selector__link " data-tracking-control-name="language-selector-sv_SE" data-locale="sv_SE" lang="sv_SE">
+                Svenska (Suédois)
+            </button>
+          </li>
+          <li aria-label="ภาษาไทย (Thaï)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="ภาษาไทย (Thaï)" class="language-selector__link " data-tracking-control-name="language-selector-th_TH" data-locale="th_TH" lang="th_TH">
+                ภาษาไทย (Thaï)
+            </button>
+          </li>
+          <li aria-label="Tagalog (Tagalog)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Tagalog (Tagalog)" class="language-selector__link " data-tracking-control-name="language-selector-tl_PH" data-locale="tl_PH" lang="tl_PH">
+                Tagalog (Tagalog)
+            </button>
+          </li>
+          <li aria-label="Türkçe (Turc)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="Türkçe (Turc)" class="language-selector__link " data-tracking-control-name="language-selector-tr_TR" data-locale="tr_TR" lang="tr_TR">
+                Türkçe (Turc)
+            </button>
+          </li>
+          <li aria-label="简体中文 (Chinois simplifié)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="简体中文 (Chinois simplifié)" class="language-selector__link " data-tracking-control-name="language-selector-zh_CN" data-locale="zh_CN" lang="zh_CN">
+                简体中文 (Chinois simplifié)
+            </button>
+          </li>
+          <li aria-label="正體中文 (Chinois traditionnel)" class="language-selector__item" role="menuitem">
+            <!-- Adding aria-label to both the li and the button because screen reader focus goes to button on desktop and li on mobile-->
+            <button aria-label="正體中文 (Chinois traditionnel)" class="language-selector__link " data-tracking-control-name="language-selector-zh_TW" data-locale="zh_TW" lang="zh_TW">
+                正體中文 (Chinois traditionnel)
+            </button>
+          </li>
+      
+        </ul>
+
+          
+        <button class="language-selector__button" aria-expanded="false" data-tracking-control-name="footer-lang-dropdown_trigger">
+                <span class="language-selector__label-text">Langue</span>
+          <icon class="language-selector__label-chevron lazy-loaded" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" preserveAspectRatio="xMinYMin meet" focusable="false" class="lazy-loaded"><path d="M8 9l5.93-4L15 6.54l-6.15 4.2a1.5 1.5 0 01-1.69 0L1 6.54 2.07 5z" fill="currentColor"></path></svg></icon>
+        </button>
+      
+    </div>
+  
+  
+          </li>
+      </ul>
+
+<!---->    </footer>
+  
+  
+  
+      
+
+              <script src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/1do6zzumecnl1wz319skt1m9k" async=""></script>
+          
+          <script src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/c8j9j1lfn805xcpj2ycenqfr" async="" defer=""></script>
+        <script data-module-id="media-player" src="./Comment visualiser les données sur une carte avec la librairie Folium de Python _ - Tutoriel vidéo Python _ LinkedIn Learning, anciennement Lynda.com_files/7bdek891infrs26wxjppvbiex" class="lazy-loaded"></script>
+        
+        
+      
+      
+    
+  
+  </body></html>
