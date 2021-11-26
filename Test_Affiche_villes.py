@@ -2,7 +2,7 @@
 # SAE 105: traitement de données
 # Test pour afficher des villes sur une carte
 # OpenstreetMap
-#
+# test
 #================================================
 
 STATIONS = ['ABBEVILLE', 'AJACCIO', 'ALENCON', 'BALE-MULHOUSE',

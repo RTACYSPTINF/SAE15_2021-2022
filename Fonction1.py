@@ -384,7 +384,6 @@ def crea_table_distance(N):
 
     return Liste_villes, table,d,a, table2
 
-
 def haversine_net(lat1, lon1, lat2, lon2):
     R = 6372.8  # Rayon moyen de la terre en km
 
@@ -398,7 +397,7 @@ def haversine_net(lat1, lon1, lat2, lon2):
 
     return R * c
 
-
+# programme principal de test
 if __name__ == "__main__":
     villes_liste = recup_ville_de_france('villes_france.csv') # on extrait les données brutes du fichier
     aa = extraction_ville_gps(villes_liste) # on crée la liste "aa" qui comprend les données de chaque ville dans un format normal
