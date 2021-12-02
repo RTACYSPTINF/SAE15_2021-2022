@@ -88,6 +88,13 @@ dico_INDEX_VILLES={'Departement': 0,
 
 
 def extract_ind_tel(fichcsv):
+    """
+
+    :param fichcsv: fichier csv des indicatifs téléphonique
+    source : https://fr.wikipedia.org/wiki/Liste_des_indicatifs_t%C3%A9l%C3%A9phoniques_en_France
+    :return: 5 listes où chacunes des listes contient les départements concernés par l'indicatif
+    exedmple IND01 contient une liste des département pour l'indicatif 01, etc
+    """
     with open(fichcsv) as f:
         recup = csv.reader(f, delimiter=';')
         L = []
@@ -113,6 +120,7 @@ def extract_ind_tel(fichcsv):
 
 aa = extract_ind_tel('indicatifs_france.csv')
 
+# les listes qui suivant contiennent les département de leur indicatif téléphonique
 INDICATIF_01 = aa[0]
 INDICATIF_02 = aa[1]
 INDICATIF_03 = aa[2]
