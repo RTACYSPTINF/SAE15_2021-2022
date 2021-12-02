@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<!-- saved from url=(0120)https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="FR" lang="FR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(9).txt"></script><script async="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/async-ads.js.téléchargement"></script><script src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(10).txt"></script><script src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(11).txt" id="google_shimpl"></script><script async="" data-ad-client="ca-pub-4450901223521136" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(12).txt" type="text/javascript" data-checked-head="true"></script>
+<script async="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/analytics.js.téléchargement" type="text/javascript"></script>
+<script type="text/javascript">
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-9795884-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script id="jquery" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/jquery.min.js.téléchargement" type="text/javascript"></script>
+<!--<base href="https://www.cours-gratuit.com/">--><base href=".">
+
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="tutoriel, python, importer, lire, fichier, csv, données, pandas, résultat, ligne, fichiers, lecture, writer, nom, écrire, mode, syntaxe, reader, com, import, écriture, fonction">
+<meta name="description" content="">
+<title>Tutoriel Python : importer, lire et modifier un fichier CSV</title>
+<link href="https://www.cours-gratuit.com/images/thumb/171/id-3551.webp" rel="preload" as="image">
+<link href="https://www.cours-gratuit.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta property="og:image" content="https://www.cours-gratuit.com/images/thumb/171/id-3551.png">
+<meta property="og:type" content="article">
+<meta property="article:author" content="Mouhtat Bilal">
+<style>
+    <!--
+.hljs{display:block;overflow-x:auto;padding:.8em;background:#1E1E1E;color:#DCDCDC}.hljs-keyword,.hljs-literal,.hljs-symbol,.hljs-name{color:#569CD6}.hljs-link{color:#569CD6;text-decoration:underline}.hljs-built_in,.hljs-type{color:#4EC9B0}.hljs-number,.hljs-class{color:#B8D7A3}.hljs-string,.hljs-meta-string{color:#D69D85}.hljs-regexp,.hljs-template-tag{color:#9A5334}.hljs-subst,.hljs-function,.hljs-title,.hljs-params,.hljs-formula{color:#DCDCDC}.hljs-comment,.hljs-quote{color:#57A64A;font-style:italic}.hljs-doctag{color:#608B4E}.hljs-meta,.hljs-meta-keyword,.hljs-tag{color:#9B9B9B}.hljs-variable,.hljs-template-variable{color:#BD63C5}.hljs-attr,.hljs-attribute,.hljs-builtin-name{color:#9CDCFE}.hljs-section{color:gold}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-bullet,.hljs-selector-tag,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#D7BA7D}.hljs-addition{background-color:#144212;display:inline-block;width:100%}.hljs-deletion{background-color:#600;display:inline-block;width:100%}
+ body a {color:#1c73ba;}
+body a, #rt-main-surround .rt-article-title, #rt-main-surround .title, #rt-showcase .title, #rt-showcase .showcase-title span, #rt-top .title, #rt-header .title, #rt-feature .title {color:#1c73ba;}
+    -->
+  </style>
+<script async="" type="text/javascript" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/highlight.min.js.téléchargement" id="scptloadjs"></script>
+<script type="text/javascript">
+
+  </script>
+<style>
+ .remositoryonethumb {width: 120px;}.remositorydelthumb {height:		150px;}
+</style>
+<meta property="og:site_name" content="cours-gratuit.com">
+<meta property="og:title" content="Tutoriel Python : importer, lire et modifier un fichier CSV">
+<meta property="og:url" content="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python">
+<meta property="fb:app_id" content="231355707002590">
+<meta name="google-site-verification" content="POgyjebrXoBa38ASvfbnjT_Ds4Nj2IB5b4UlyJQRUik">
+<meta name="verification" content="fa4ce504b5faf5bdf567e083082cf565">
+<meta name="y_key" content="f2aac0388706adef">
+<meta name="msvalidate.01" content="08BAF9BBD2D677A1C9B4D3435547EC3C">
+<script type="text/javascript">
+var GantryBuildSpans=function(g,j,k){(g.length).times(function(i){var e="."+g[i];var f=function(a){a.setStyle('visibility','visible');var b=a.getText();var c=b.split(" ");first=c[0];rest=c.slice(1).join(" ");html=a.innerHTML;if(rest.length>0){var d=a.clone().setText(' '+rest),span=new Element('span').setText(first);span.inject(d,'top');a.replaceWith(d)}};$$(e).each(function(c){j.each(function(h){c.getElements(h).each(function(b){var a=b.getFirst();if(a&&a.getTag()=='a')f(a);else f(b)})})})})};
+</script>
+<style>@media print{.cc-window{display:none}}@media screen and (max-width:900px){.cc-btn{white-space:normal}}@media screen and (max-width:450px){#fe-side{float:none;margin-right:0;width:auto;border:0;border-bottom:2px solid #000}}@media screen and (max-width:414px) and (orientation:portrait),screen and (max-width:736px) and (orientation:landscape){.cc-window .cc-bottom{bottom:0}.cc-window .cc-banner{left:0;right:0;-ms-flex-direction:column;flex-direction:column}.cc-window .cc-banner .cc-compliance{-ms-flex:1 1 auto;flex:1 1 auto}.cc-window .cc-message{margin-bottom:1em}.cc-window .cc-banner{-ms-flex-align:unset;align-items:unset}.cc-window .cc-banner .cc-message{margin-right:0}}@media only screen and (min-width:700px){.fixed-width{float:right}.fixed-width-left{overflow:hidden}}#rt-header>.rt-container{width:100%;background-color:#fafafa}a,html body * div.clear{border:0;margin:0;padding:0}a{vertical-align:baseline;background:0 0}b,center,dd,div,dl,dt,em,i,iframe,img,ins,label,li,ol,pre,span,strong,sub,sup,table,tbody,td,th,thead,tr,ul{margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:0 0}body,h1,h2,h3,h4,h5,p{padding:0;outline:0}a,form{outline:0}body,form,h1,h2,h3,h4,h5,p{border:0;vertical-align:baseline;background:0 0}#rt-header.rt-container,#rt-header4>div.rt-grid-12.rt-alpha.rt-omega{width:100%}.rt-container{margin:0 auto;width:1015px}body{font-size:15px;line-height:1.75em;background:#ddd;margin:auto;font-family:"Amazon Ember",Arial,sans-serif;min-width:1025px}#rt-header .rt-block,.rt-block{padding-top:6px;padding-bottom:3px;margin-bottom:0;position:relative}a{text-decoration:none;color:#c00}ul{list-style-type: disc;}ul li{padding:0;margin:0}ul li a{font-size:1.2em;line-height:1.8em}#rt-bottom a{color:#ddd;font-size:13px;line-height:15.6px;padding:.2em}.rt-container,body{background:#fff}html body * div.clear{background:0;clear:both;display:block;float:none;font-size:0;list-style:none;overflow:hidden;visibility:hidden;width:0;height:0}.rt-container .rt-grid-12{width: 1015px}#rt-header4{padding-top:5px}#rt-header ul.menu li>a,body{color:#333}#rt-header ul.menu li:hover>a{color:#f90}#rt-header ul.menu li:hover>a span{}#rt-feature{background:#0f0f0f;color:#aaa}#rt-bottom{background-color:#232f3e;color:#ddd;padding-bottom:20px;margin-top:10px}#rt-header{clear: left;position: relative;z-index: 2;margin: 0;padding: 0 9px 0 15px;border-bottom: 1px solid rgba(0,0,0,.1);white-space: nowrap;height: 40px;background: #fafafa;color: #333}#rt-header .rt-block{padding-top:1px}#rt-header ul,#rt-header ul li{padding:0;float:left;position:relative}#rt-header ul{margin:0;z-index:1000}#rt-header ul li{margin-left:4px;list-style:none;height:29px}#rt-header ul li a{display:block;height:29px;margin-left:8px;cursor:pointer;z-index:100;position:relative}#rt-header ul li a span{display:block;padding:0 10px;height:29px;line-height:28px;margin-left:-8px;font-size:13px}#rt-header{overflow:hidden}#remositorycontainerlist td,#rt-bottom .rt-container{border:0}.cc-window{opacity:1;transition:opacity 1s ease}.cc-window .cc-invisible{opacity:0}.cc-link{text-decoration:underline}.cc-window{position:fixed;overflow:hidden;box-sizing:border-box;font-family:Helvetica,Calibri,Arial,sans-serif;font-size:16px;line-height:1.5em;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;z-index:9999}.cc-window .cc-banner{padding:1em 1.8em;width:100%;-ms-flex-direction:row;flex-direction:row}.cc-btn,.cc-link{cursor:pointer}.cc-link{opacity:.8;display:inline-block;padding:.2em}.cc-link:hover{opacity:1}.cc-link:active,.cc-link:visited{color:initial}.cc-btn{display:block;padding:.4em .8em;font-size:.9em;font-weight:700;border-width:2px;border-style:solid;text-align:center;white-space:nowrap}.cc-bottom{bottom:1em}.cc-compliance,.cc-window.cc-banner{-ms-flex-align:center;align-items:center}.cc-banner .cc-bottom{left:0;right:0;bottom:0}.cc-banner .cc-message{display:block;-ms-flex:1 1 auto;flex:1 1 auto;max-width:100%;margin-right:1em}.cc-compliance{display:-ms-flexbox;display:flex;-ms-flex-line-pack:justify;align-content:space-between}.cc-theme-edgeless .cc-window{padding:0}.cc-banner .cc-theme-edgeless .cc-btn{margin:0;padding:.8em 1.8em;height:100%}.cc-banner .cc-theme-edgeless .cc-message{margin-left:1em}#rt-header2 .menu::before{content:"Domaine :";font-size:14px;margin-left:11px;float:left;color:#585858;font-weight:700}.cc-color-override--1762072787 .cc-window{color:#838391;background-color:#edeff5}.cc-color-override--1762072787 .cc-link,.cc-color-override--1762072787 .cc-link:active,.cc-color-override--1762072787 .cc-link:visited{color:#838391}.cc-color-override--1762072787 .cc-btn{color:#fff;border-color:transparent;background-color:#4b81e8}.cc-color-override--1762072787 .cc-btn:focus,.cc-color-override--1762072787 .cc-btn:hover{background-color:#71a7ff}#rt-main-surround .rt-article-title{color:#1c73ba}.breadcrumbpr{     clear: left;z-index: 2;border-bottom: 1px solid rgba(0,0,0,.1);white-space: nowrap;height: 36px;background: #fafafa;width: 100vw;margin-top: -6px;margin-left: -300vw;padding-left: 300vw;margin-right: -300vw;padding-right: 300vw}.breadcrumbpr h5{    padding: 9px 0px;margin: 0;color: #595959;text-decoration: none;text-indent: -2px;display: inline-block;line-height: 1.5em;font-size: 12px;vertical-align: middle} #currentbrcr,.breadcrumbpr h5 a{font-size: 1em;padding: 2px;font-weight: 500;color: #4a4a4a} .breadcrumbpr h5 span{font-size: 1.25em}.breadcrumbpr h5 a:hover{color:#c45500}p{margin:0 0 15px}ol,ul{padding-left:40px}#remositorycontainerlist table td{border:0;text-align:center;font-size:14px}h2.title{display:block;letter-spacing:normal;line-height:1.2em;font-size:1.8em;margin:0}a:active,a:link,a:visited,h2 a,h3 a,h4 a,h5 a,h6 a{color:#0066c0;text-decoration:none}a:hover{color:#f90;text-decoration:underline}h1{font-size: 2em;line-height: normal;padding: 0;margin: 25px 0 15px 10px;font-family: Lato,Helvetica,Arial,Open-sans}h1,h2,h3{color:#000}h2{font-size:1.5em;margin:.75em 0}h3{font-size:1.17em;margin:.83em 0}h4{margin:1.12em 0}h4,h5,h6{color:#000}h5{font-size:.83em;margin:1.5em 0}h6{font-size:.75em;margin:1.67em 0}b,h1,h2,h3,h4,h5,h6,strong{font-weight:bolder}.rt-joomla .rt-article{margin-bottom:15px}.rt-joomla h1.rt-article-title{width:auto}.fb_reset>div,.rt-article{overflow:hidden}.rt-joomla .rt-article-cat{float:left;margin-top:10px;margin-bottom:0}.rt-joomla .rt-headline{margin:15px 0;position:relative}.title{font-weight:400}.module-title{margin:15px 0}#rt-bottom .rt-container,#rt-feature .rt-container,#rt-main .rt-container,#rt-maintop .rt-container{background:0 0} #rt-main-surround .rt-article-title,.fb_reset{letter-spacing:normal;margin:0;text-transform:none}#rt-main-surround .rt-article-title{display:block; color: #222; font-size: 1.8em;    margin-bottom: -10px}.fb_reset{background:0 0;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;line-height:1;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_iframe_widget,.fb_iframe_widget span,.remositoryfilesummary img{display:inline-block;position:relative}.fb_iframe_widget span{text-align:justify}.fb_iframe_widget iframe,.fsdetail>div{}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop iframe,.fb_iframe_widget_fluid_desktop span{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}#remositorycontainerlist h2 a,#remositorycontainerlist h3 a{text-decoration:none; color:#272727}#remositorycontainerlist h2 a img,#remositorycontainerlist h3 a img{vertical-align:middle;display:inline;width:32px;height:32px;border:0}form{padding:0}.rt-joomla .rt-description{margin:10px 0;overflow:hidden}.rt-pagination{text-align:center;width:80%;display: flex;margin: 10px auto;align-content: space-between;align-items: center;flex-wrap: nowrap;justify-content: space-evenly!important}.rt-pagination .rt-results{margin-bottom:5px}.rt-joomla .categorylist input{border:1px solid #ddd;font-size:1.2em;padding:2px;margin:0}.rt-joomla tr.even td{padding:5px;background:#f0f0f0;border-bottom:1px solid #ddd}.rt-joomla tr.odd td{padding:5px;background:#fafafa;border-bottom:1px solid #ddd}.rt-joomla-table{color:#333}#remositorycontainerlist img,#remositoryfilelisting div img{border:0;padding:2px}#remositorycontainerlist table{width:98%;border:0}#remositorycontainerlist th{text-align:left;border:0;background-color:#d3d3d3}#remositorycontainerlist h2,#remositorycontainerlist h3,.rt-article table p,form{margin:0}#remositorycontainerhead{width:80%}#remositorycontainerlist tr td{word-wrap:break-word;overflow-wrap:break-word}#remositorycontainerlist tr td a img{vertical-align:middle}#remository p{margin:0 0 6px;padding:0}#remositoryfilelisting h2,#remositoryfilelisting h3{float:left;clear:both;padding:0;margin:.6em 0}.remositoryfileblock{border-top:1px solid #ddd;padding:5px 0;height:258px;display:flow-root}#remositorycontainer h1,.categorylist h1{color: #3979a7;font-family: Tahoma,verdana,sans-serif;padding: 12px 17px 12px 23px;text-align: center;text-transform: uppercase;font-size: 1.3em;border: solid 5px #e79757;border-left: none;border-radius: 5px 30px 30px 5px;width: fit-content;background: linear-gradient(360deg, #ffffff 9px, #778289 0) 0 5px,linear-gradient(235deg, #ffffff 8px, #ffffff 0) 0 5px;background-repeat: repeat-y;background-size: 15px 12px;margin: 20px 0px 20px 0px}.bannermobads{min-height:100px;padding: 10px 0 0;margin: auto;width:620px;display: none}.AdsInsideContent{height:280px; width:660px; padding: 0;margin: auto} .remositorypagenav{clear:both;width:100%;text-align:center;padding-top:10px;font-size:large}.fsdetail>div{margin:.2em 0 0 .4em;text-align:justify;width:97%}#remositoryfilelisting>div>h3 img,#remositoryfilelisting>div>h3 img::before{width:25px;height:25px;margin-right:10px;vertical-align:middle}.fsdetail{display: block;margin-left: 130px;height: 160px;position: relative;line-height: 1.4em}.fsdetail>div>span{margin-top:2px;font-weight:500;color:#3f3f3f;font-size:12.5px;display:block}.remositoryfilesummary img{float:left;width:120px;vertical-align:top}.InfeedAds{width:100%!important;display:table;align-content:center;margin-left:auto;margin-right:auto}#fe-side h4,.formation-enligne .fe-title{font-size:18px;line-height:36px;padding-left:10px}.formation-enligne .fe-title{background:#0088ba;height:auto;color:#fff;margin:0 0 20px;overflow:hidden;clear:both}.formation-enligne .fe-title h3{font-size:20px;margin:7px;color:#fff}.fe-content{margin:0 0 30px 20px}.fe-content li{list-style-type:none;padding-left:16px;margin:0 0 3px}.fe-content h4{margin-bottom:10px}.fe-content li,.fe-wrap,.formation-enligne{overflow:hidden}#fe-side li{list-style-type:none;padding:4px 10px;border-bottom:#cacccd solid 1px}#fe-side{float:left;margin:10px;width:300px;background:#eaeaea;padding:5px 15px 15px}#fe-side h4{background:#dbdcdd;height:36px;margin:10px 0;color:#0088ba}#fe-intro{padding:10px;background-color:#fff;overflow:hidden;margin:10px;border:2px dashed #ccc}.read-more-state{display:none}.read-more-target{opacity:0;max-height:0;font-size:0;transition:.25s ease}.read-more-state:checked~.read-more-wrap .read-more-target{opacity:1;font-size:inherit;max-height:999em}.read-more-state~.read-more-trigger:before{content:'Lire la suite...'}.read-more-state:checked~.read-more-trigger:before{content:'Cacher le texte'}.read-more-trigger{cursor:pointer;display:inline-block;padding:0 .5em;color:#666;font-size:.9em;line-height:2;border:1px solid #ddd;border-radius:.25em;margin-top:-30px;margin-left:30px}#remositoryfooter{width:98%;padding:10px 10px 20px 0;border-top:2px solid #999;clear:both}#remositoryfileinfo img,.rt-article .left img{border:0;max-width: 660px;height: auto;margin: 10px 0px 10px 0px} .rt-article .left video{max-width: 660px;height: auto;margin: 10px 0px 10px 0px}.rt-article .left {width: 680px; display: inline-block;} #remositoryfileinfo dt{width:10%;float:left;clear:left;margin:0;padding:0 .2em .2em;font-weight:700;text-align:right}dt{clear:both}#remositoryfileinfo dd{float:left;margin-left:5px;margin-right:5px;padding:0 .2em .2em;text-align:justify;width:97%}#remositoryfileinfo h2{width:95%;padding:10px 0 0 5px}#remositoryfileinfo{text-align:justify} .ResponsiveAds{width:100%!important;display:table;align-content:center;margin-left:auto;margin-right:auto}span.starss,span.starss span{display:inline-block;background:url(/images/starsmin.png) 0 -16px repeat-x;width:80px;height:16px}span.starss span{background-position:0 0;float: left}#rt-main-surround .title,body a{color:#1c73ba}#rt-content-bottom .rt-alpha,#rt-content-top .rt-alpha{margin-left:0}#rt-content-bottom .rt-omega,#rt-content-top .rt-omega{margin-right:0}#rt-content-bottom,#rt-content-top{overflow:hidden}.rt-grid-12,.rt-grid-6{display:inline;float:left;position:relative;margin-left:10px;margin-right:10px}.rt-container .rt-grid-6{width:460px}#exercice h2,.top{float:left;width:100%}#cours{margin:auto;height:auto;width:auto}.top{margin:0 0 0 8px}
+#cours h3,#cours ul{font-size:15px;font-family:arial;padding:0 0 0 20px}.article_detail{    display: flex;flex-direction: row;justify-content: space-between}#cours ul{border:1px solid silver;padding:2px 4px;background:#efefef;font-size:11px;height:150px}#cours li{list-style:none;border-bottom:1px solid #d6d6d6;padding:3px 0}#cours li a{text-decoration:none;color:#4d80c5}#cours li a:hover{color:#312929}#cours table{width:100%;border-collapse:separate;border-spacing:10px 10px}#cours table td{width:25%;margin:0 0 0 8px;border-width:15px;vertical-align:top}.code-algorithm,.code-execution{padding-left:7px;width:84%;margin-left:20px}.code-execution{border-left:4px solid #929292!important;border:1.5px solid #929293}.code-algorithm{color:#383a42;background:#fafafa;border:1px solid #929293}.topbanner{height:280px;width:970px}.jo-sociallocker.jo-sociallocker-msie{background-color:#d9edf6;border-color:#bbe7f0;color:#3985ac}.jo-sociallocker{background-color:#fcf7e3;border:1px solid #fbedd5;-moz-border-radius:4px 4px 4px 4px;-webkit-border-radius:4px 4px 4px 4px;border-radius:4px 4px 4px 4px;margin-bottom:20px;padding:8px 35px 8px 14px;-moz-text-shadow:0 1px 0 rgba(255,255,255,.5);-webkit-text-shadow:0 1px 0 rgba(255,255,255,.5);text-shadow:0 1px 0 rgba(255,255,255,.5);width:60%;margin-left:auto;margin-right:auto}.jo-sociallocker-button{float:left;margin-left:10px}.jo-sociallocker-after-text{margin-bottom:20px}.jo-sociallocker-buttons{height:35px}.jo-sociallocker-strong{font-size:30px;color:#000}#rt-top{background-color:#232f3e;display:flow-root;height:85px;padding: 0 5vw 0 5vw}#rt-mainbody .rt-article .rt-articleinfo{margin: 10px 0 5px;font-size: 14px}.search-form-ban{width: 40%;float: right;padding-top: 25px}#rt-top .rt-container{background:0 0;float:left}.logo{float:left;margin: 18px 0 0 0}.logo img{width:140px;height:49px}#rt-top2 .rt-grid-12{width:auto}#rt-top2 .menu{font-size: 14px;height: 77px;font-weight: 600;padding-bottom: 5px;text-transform: uppercase;color: #fff}#rt-top2 .menu span,.inputlg,.logo{display:block}#rt-top2 .menu a{color:#fff}#rt-top .rt-container{width: fit-content}#rt-top2 .menu li{padding:22px 8px 0 22px;list-style:none;float:left;height:55px}.inputlg{float:left;padding:0;height:40px;width:400px;margin:0;background-color:#fff;border:1px solid #aaa;text-align:center;color:#666;font-size:1.333em;-moz-border-radius:4px 0 0 4px;-webkit-border-radius:4px 0 0 4px;border-radius:4px 0 0 4px}.input-group{position:relative;display:table;border-collapse:separate}.btnprimary{border-top:1px solid #aaa;border-left:1px solid #aaa;border-width:1px;margin:0 0 0 -1px;height:40px;position:absolute;top:0;cursor:pointer;width:47px!important;color:transparent!important;background:url(/templates/rt_quasar_j15/images/icon-search.png) 10px 5px no-repeat #fff;-moz-border-radius:0 4px 4px 0;-webkit-border-radius:0 4px 4px 0;border-radius:0 4px 4px 0}.remofiles-grid-container{display: inline-block;gap: 10px 15px;column-count: 3;grid-row-gap: 10px;grid-column-gap: 15px;max-height: 1350px}#remositorycontainer{height:58px}.remofiles-grid-container h3{font-size:15px!important;padding-left:2.5em!important;text-indent:-2.5em;line-height:.6em}.fsdetail div{font-size:14px;line-height:1.3em}.fsdetail>span{font-size: 0.8em;margin-top: 5px;height: 75px;line-height: 1.5em;display: -webkit-box;max-width: 200px;-webkit-line-clamp: 5;-webkit-box-orient: vertical;overflow: hidden}.remositoryfilesummary{display:inline-block;height:185px}.remocateg-grid-container{display: flex;grid-template-columns: repeat(auto-fill,minmax(180px,1fr));gap: 15px 20px;grid-row-gap: 15px;grid-column-gap: 15px;margin: 20px 5px 25px;flex-wrap: wrap;align-content: center;justify-content: space-evenly}.remocateg-grid-container h2 {font-size: 1em!important;line-height: 1.6em;padding: 8px 12px;text-align: center;font-weight: 600}.remocateg-grid-container li a{font-size:14px;color:#696969}.remocateg-grid-container li{margin:-3px 0}.remocateg-grid-container ul{padding: 8px 12px;
+    border-top: 2px solid #ddd}.remocateg-grid-container>div{margin:0;border-radius:4px;border-width:1px;border-color:#dbdbdb;background-color:#fff;border-style:solid;box-shadow:#000 3px 3px 16px -10px}@font-face{font-family:"Font Awesome 5 Pro";font-style:normal;font-weight:900;src:url(/templates/font/fa-solid-900.eot);src:url(./templates/font/fa-solid-900.eot?#iefix) format("embedded-opentype"),url(./templates/font/fa-solid-900.woff2) format("woff2"),url(/templates/font/fa-solid-900.woff) format("woff"),url(/templates/font/fa-solid-900.ttf) format("truetype"),url(/templates/font/fa-solid-900.svg#fontawesome) format("svg")}.fa,.fas{font-family:"Font Awesome 5 Pro";font-weight:900}.fa,.fab,.fal,.far,.fas{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1}.fa-copy:before{content:"\f0c5"}.text-success{color:#32cd32}.fa-check:before{content:"\f00c"}.rt-article table{border-collapse:collapse;border-spacing:0;empty-cells:show;border:1px solid #cbcbcb}.rt-article table caption{color:#000;font:italic 85%/1 arial,sans-serif;padding:1em 0;text-align:center}.rt-article table td,.rt-article table th{border-left:1px solid #cbcbcb;border-width:0 0 0 1px;font-size:inherit;margin:0;overflow:visible;padding:.5em 1em}.rt-article table thead{background-color:#e0e0e0;color:#000;text-align:left;vertical-align:bottom;font-weight:600}.rt-article table td{background-color:transparent;border-bottom:1px solid #cbcbcb}.rt-article table tbody>tr:last-child>td{border-bottom-width:0}.rt-article-inner{text-align: justify;height: 100%;position: relative} .rt-article-side{width: 300px;float: right;margin: 1px 1px 0px 10px;background: #fcfcfc;padding: 10px;border: 1px solid #ebebeb}.remo-article-side {width: 336px;float: right;display: table-cell;height: 100% !important;margin: 5px 1px 20px 5px;background: #fcfcfc;padding: 10px;border: 1px solid #ebebeb}.BanInsideContent{min-height:280px;width:970px}.rt-article h2,h3{margin:0}  .remo-article-center {margin: 10px auto;text-align: center;width:490px;height:160px;background-color: #f2f2f2;padding: 15px;border-radius: 10px;border: 1px solid #e1e1e1} .remo-article-center picture{float:left} .related_docs_center{width: 100%;margin: 5px} .text-article h2,h3{margin:0}.footerads{align-content: center;font-weight: bolder;vertical-align: middle; height:90px; max-height: 90px;padding: 0px;margin: auto;background-color: rgba(255, 255, 255, 0.7);box-shadow: rgb(0 0 0 / 50%) 0px 0px 10px;text-align: center;transition: all 0.5s ease-in-out 0s;width: 100%;position: -webkit-sticky;position: sticky;bottom: 0;z-index: 99999}#close {float:right;display:inline-block;padding:2px 5px;background:#ccc}.remocateg-grid-container ul{list-style-type: none !important}.related_docs{float:left;width: 625px;margin: 0px 0px 15px 0px} .related_docs ul{font-size: 15px;font-weight: 500;list-style: disc;line-height: 1.2em}.latestremos_dow{margin: 10px auto;display: grid;grid-template-columns: repeat(auto-fill,minmax(131px,1fr));gap: 10px 10px;grid-row-gap: 10px;grid-column-gap: 10px}.latestremo_elem_dow{position: relative;    padding: 2px 0px;display: flow-root;font-size: 14px;line-height: 1.2em;background: #fff;border-radius: 8px;box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);display: inline-block;overflow: hidden;position: relative;transform-origin: top left;vertical-align: middle}.latestremo_elem_dow img {margin: 0 auto;padding: 0 !important;border-bottom: 0.5px solid #e9e9e9 !important;}.latestremo_elem_dow h4{font-weight: 500;padding: 4px 1px 0px 1px;font-size: 0.95em;height: 52px;line-height: 17px;margin: 0px 0px;display: -webkit-box;text-align: center;max-width: 200px;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden}.latestremo_elem_dow h4 a{color: #444;font-family:Arial, Helvetica, sans-serif}.latestremos_dow2{width: 300px;float: right;margin: 0px 0px 15px 0px;padding: 10px 12px;box-shadow: 0px 0 0.3rem #e3e3e3 !important;background: #fcfcfc;border-radius: 2px} .latestremos_dow2 ul{padding-left: 1px;font-size: small;text-align: left;list-style: none}.latestnewstuto_down {display: grid;grid-template-columns: repeat(auto-fill,minmax(230px,1fr));gap: 10px 16px;grid-row-gap: 20px;grid-column-gap: 15px;margin: 4px}.latestremos_dow2 ul {padding-left: 1px;font-size: small;text-align: left;margin-top: 12px;list-style-type: none; border-top: 1px solid #e0e0e0} .latestremos_dow2 h3{margin-top: 25px}.latestremos_dow2 ul li {line-height: 1.6em;margin-top: 0.5em;border-bottom: 1px solid #e0e0e0;padding-bottom: 0.5em}.latestremos_dow2 ul li a {font-size: 1.1em;line-height: 0px;color: #424242}.related_docs_center .left {float: left;width: 660px;margin: 0px 10px 20px 0px}.latestnewstuto_elem_down {position: relative;height: 195px;display: flow-root;font-size: 14px;line-height: 1.2em;background: #fff;box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);display: inline-block;overflow: hidden;position: relative;transform-origin: top left;vertical-align: middle}.latestnewstuto_elem_down h4 a {color: #444;font-family: Arial, Helvetica, sans-serif}.latestnewstuto_elem_down img {margin: 0 auto;width: 100%;height: 140px;border-bottom: 1px solid #e9e9e9}.latestnewstuto_elem_down h4 {font-weight: 500;padding: 4px;font-size: 0.9em;height: 40px;line-height: 17px;margin: 2px 1px 6px;display: -webkit-box;max-width: 225px;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden}.gsc-search-button-v2 {font-size: 0;padding: 7px 15px!important;width: auto;vertical-align: middle;border: 1px solid #666;border-radius: 2px;border-color: #3d4b5c !important;background-color: #3d4b5c!important;background-image: linear-gradient(top, #4d90fe, #4787ed)}.gsc-search-button-v2 svg {fill: #fff;width: 20px!important;height: 20px!important}.artpreview{width:660px ;margin:0 !important; height:338px !important} .afterprev{height:100px} .rt-top-container{width: 985px;margin: 0 auto;padding: 0 10px} .rt-article table {width:auto !important}.downico{width:50px;height:46px!important}.remoarticlesblock h4{margin: 0!important;font-weight: 500;padding: 4px;font-size: 0.9em;height: 40px;line-height: 17px;margin: 2px 1px 6px;display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden}.remoarticlesblock h4 a {color: #444;font-family: Arial, Helvetica, sans-serif}.remoarticlesblock {height: auto !important;position: relative;padding: 0 !important;width: 317.33px;display: flow-root;font-size: 15px;line-height: 1.40em;box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);overflow: hidden;transform-origin: top left;vertical-align: middle} .remoarticlesblock img {margin: 0 auto!important;width: 100%;border-bottom: 1px solid #e9e9e9!important;padding:0!important} #rt-bottom .rt-omega .menu {display: grid; grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); margin: 10px 5px 25px}#rt-bottom .rt-alpha .menu {display: grid; margin: 10px 5px 25px}
+      
+</style>
+<script type="text/javascript">
+        $.fn.starss = function() {return $(this).each(function() {$(this).html($('<span />').width(Math.max(0, (Math.min(5, parseFloat($(this).html())))) * 16));
+        });}
+</script>
+<meta http-equiv="origin-trial" content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><link rel="preload" href="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(13).txt" as="script"><script type="text/javascript" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(13).txt"></script><link rel="preload" href="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(14).txt" as="script"><script type="text/javascript" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(14).txt"></script><script src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/cse_element__fr.js.téléchargement" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/default+fr.css"><link type="text/css" rel="stylesheet" href="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/default.css"><style type="text/css">.gsc-control-cse{font-family:arial, sans-serif}.gsc-control-cse .gsc-table-result{font-family:arial, sans-serif}.gsc-refinementsGradient{background:linear-gradient(to left,rgba(255,255,255,1),rgba(255,255,255,0))}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-webkit-user-select:none;white-space:nowrap}.gsst_e{vertical-align:middle;opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em;-webkit-appearance:button}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gssb_a{padding:0 9px}.gsib_a{padding:5px 9px 4px 9px}.gscb_a{line-height:27px}.gssb_e{border:0}.gssb_l{margin:5px 0}input.gsc-input::-webkit-input-placeholder{font-size:14px}input.gsc-input:-moz-placeholder{font-size:14px}input.gsc-input::-moz-placeholder{font-size:14px}input.gsc-input:-ms-input-placeholder{font-size:14px}input.gsc-input:focus::-webkit-input-placeholder{color:transparent}input.gsc-input:focus:-moz-placeholder{color:transparent}input.gsc-input:focus::-moz-placeholder{color:transparent}input.gsc-input:focus:-ms-input-placeholder{color:transparent}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body aria-hidden="false" style="padding: 0px 0px 154px;">
+<div id="rt-top">
+<div class="rt-top-container">
+<div class="logo">
+<a href="https://www.cours-gratuit.com/"><picture><source srcset="/templates/rt_quasar_j15/images/cours2.webp" type="image/webp"><img src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/cours2.png" alt="Cours-Gratuit" width="140" height="49"></picture>
+</a></div><a href="https://www.cours-gratuit.com/">
+</a><div class="rt-container"><a href="https://www.cours-gratuit.com/">
+</a><div id="rt-top2"><a href="https://www.cours-gratuit.com/">
+</a><div class="rt-grid-12 rt-alpha rt-omega"><a href="https://www.cours-gratuit.com/">
+</a><div class="rt-block"><a href="https://www.cours-gratuit.com/">
+</a><div class="module-surround"><a href="https://www.cours-gratuit.com/">
+</a><div class="module-content"><a href="https://www.cours-gratuit.com/">
+</a><ul class="menu"><a href="https://www.cours-gratuit.com/"></a><li class="item432"><a href="https://www.cours-gratuit.com/"><a href="https://www.cours-gratuit.com/"><span>Cours</span></a></a></li><li class="item434"><a href="https://www.cours-gratuit.com/blog/"><span>Blog</span></a></li></ul> </div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="search-form-ban"><script async="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/f(15).txt" type="text/javascript"></script><div id="___gcse_0"><div class="gsc-control-searchbox-only gsc-control-searchbox-only-fr" dir="ltr"><form class="gsc-search-box gsc-search-box-tools" accept-charset="utf-8"><table cellspacing="0" cellpadding="0" class="gsc-search-box"><tbody><tr><td class="gsc-input"><div class="gsc-input-box" id="gsc-iw-id1"><table cellspacing="0" cellpadding="0" id="gs_id50" class="gstl_50 gsc-input" style="width: 100%; padding: 0px;"><tbody><tr><td id="gs_tti50" class="gsib_a"><input autocomplete="off" type="text" size="10" class="gsc-input" name="search" title="rechercher" id="gsc-i-id1" dir="ltr" spellcheck="false" style="width: 100%; padding: 0px; border: none; margin: 0px; height: auto; background: url(&quot;https://www.google.com/cse/static/images/1x/fr/branding.png&quot;) left center no-repeat rgb(255, 255, 255); outline: none;"></td><td class="gsib_b"><div class="gsst_b" id="gs_st50" dir="ltr"><a class="gsst_a" href="javascript:void(0)" title="Effacer le contenu du champ de recherche" role="button" style="display: none;"><span class="gscb_a" id="gs_cb50" aria-hidden="true">×</span></a></div></td></tr></tbody></table></div></td><td class="gsc-search-button"><button class="gsc-search-button gsc-search-button-v2"><svg width="13" height="13" viewBox="0 0 13 13"><title>rechercher</title><path d="m4.8495 7.8226c0.82666 0 1.5262-0.29146 2.0985-0.87438 0.57232-0.58292 0.86378-1.2877 0.87438-2.1144 0.010599-0.82666-0.28086-1.5262-0.87438-2.0985-0.59352-0.57232-1.293-0.86378-2.0985-0.87438-0.8055-0.010599-1.5103 0.28086-2.1144 0.87438-0.60414 0.59352-0.8956 1.293-0.87438 2.0985 0.021197 0.8055 0.31266 1.5103 0.87438 2.1144 0.56172 0.60414 1.2665 0.8956 2.1144 0.87438zm4.4695 0.2115 3.681 3.6819-1.259 1.284-3.6817-3.7 0.0019784-0.69479-0.090043-0.098846c-0.87973 0.76087-1.92 1.1413-3.1207 1.1413-1.3553 0-2.5025-0.46363-3.4417-1.3909s-1.4088-2.0686-1.4088-3.4239c0-1.3553 0.4696-2.4966 1.4088-3.4239 0.9392-0.92727 2.0864-1.3969 3.4417-1.4088 1.3553-0.011889 2.4906 0.45771 3.406 1.4088 0.9154 0.95107 1.379 2.0924 1.3909 3.4239 0 1.2126-0.38043 2.2588-1.1413 3.1385l0.098834 0.090049z"></path></svg></button></td><td class="gsc-clear-button"><div class="gsc-clear-button" title="effacer les résultats">&nbsp;</div></td></tr></tbody></table></form></div></div></div>
+</div>
+</div>
+
+<div id="rt-main-surround" style="height: auto !important;">
+<div class="rt-body" style="height: auto !important;">
+<div id="rt-main" class="mb12" style="height: auto !important;">
+<div class="rt-container" style="height: auto !important;">
+<div class="rt-grid-12 " style="height: auto !important;">
+<div class="rt-block" style="height: auto !important;">
+<div id="rt-mainbody" style="height: auto !important;">
+<div class="breadcrumbpr"><h5><a href="https://www.cours-gratuit.com/">Cours gratuits</a> <span>»</span> <a href="https://www.cours-gratuit.com/cours-informatique">Cours informatique</a> <span>»</span> <a href="https://www.cours-gratuit.com/cours-programmation">Cours programmation</a> <span>»</span> <a href="https://www.cours-gratuit.com/cours-python/">Cours Python</a> <span>»</span> <a href="https://www.cours-gratuit.com/tutoriel-python/">Tutoriel Python</a></h5></div><div class="rt-joomla " style="height: auto !important;">
+<div class="rt-article" style="height: auto !important;">
+<center>
+</center>
+<div class="rt-headline">
+<h1 class="rt-article-title">
+Tutoriel Python : importer, lire et modifier un fichier CSV </h1>
+<div class="clear"></div>
+</div>
+<div class="latestremos_dow2" style="height: auto !important;">
+<ins class="adsbygoogle lazyadsto" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4450901223521136" data-full-width-responsive="true" data-ad-slot="1120248003" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_1_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_1_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-google-query-id="CPPd8ezSw_QCFQvw7QodHIUE0w" data-load-complete="true"></iframe></ins></ins></ins>
+<ul><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-manipuler-un-module-en-python">Python : gestion des modules (importer, installer et utiliser)</a></li><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-manipuler-les-fichiers-binaires-avec-pickle">Tutoriel Python &amp; Pickle&nbsp;: manipuler les fichiers binaires</a></li><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-crer-un-histogramme-avec-python">Tutoriel Python : créer un histogramme</a></li><li><a href="https://www.cours-gratuit.com/tutoriel-excel/tutoriel-comment-ouvrir-un-fichier-csv-avec-excel">Tutoriel comment ouvrir un fichier CSV avec Excel</a></li><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-crer-un-module-en-python">Tutoriel Python :&nbsp;comment créer un module </a></li><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-manipuler-les-fichiers-et-dossiers-en-python">Tutoriel Python&nbsp;: manipuler les fichiers et les dossiers</a></li><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-programmer-les-fonctions-statistiques-avec-numpy">Tutoriel Python-Numpy&nbsp;: les fonctions statistiques</a></li><li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-prtraitement-des-donnes-avec-python">Tutoriel Python: prétraitement des données numériques</a></li></ul> <ins class="adsbygoogle lazyadsto" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4450901223521136" data-full-width-responsive="true" data-ad-slot="2254415808" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_2_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_2_anchor" style="border: none; height: 250px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:300px;height:250px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="250" frameborder="0" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-google-query-id="CPWb8uzSw_QCFdXW7QodXPwFHQ" data-load-complete="true"></iframe></ins></ins></ins>
+<div class="latestremos_dow"><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-audacity/tutoriel-pour-apprendre-a-importer-des-fichiers-dans-audacity"><picture><source class=" lazyloading" width="145" height="190" data-srcset="/images/remos_downloads/id-6166.6166.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/id-6166.6166.pdf_thumb-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/id-6166.6166.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-6166.6166.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-audacity/tutoriel-pour-apprendre-a-importer-des-fichiers-dans-audacity">Tutoriel pour apprendre à Importer des fichiers dans Audacity</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-logiciel-outils-de-statistique/cours-avec-exercices-et-problemes-pour-tout-savoir-sur-le-logiciel-de-statistique-r"><picture><source class=" lazyloading" width="145" height="190" data-srcset="/images/remos_downloads/id-9299_t-min.webp" type="image/webp" srcset="/images/remos_downloads/id-9299_t-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/id-9299_t-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-9299_t-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-logiciel-outils-de-statistique/cours-avec-exercices-et-problemes-pour-tout-savoir-sur-le-logiciel-de-statistique-r">Cours avec exercices et problemes pour tout savoir sur le logiciel de statistique R</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-powerpoint/initiation-a-l-utilisation-de-powerpoint"><picture><source class=" lazyloading" width="145" height="190" data-srcset="/images/remos_downloads/id-2473.2473.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/id-2473.2473.pdf_thumb-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/id-2473.2473.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-2473.2473.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-powerpoint/initiation-a-l-utilisation-de-powerpoint">Initiation à l'utilisation de PowerPoint</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/python-courses/complete-and-detailed-course-pandas-for-everyone-python-data-analysis"><picture><source class=" lazyloading" width="145" height="190" data-srcset="/images/remos_downloads/id-12682.12682.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/id-12682.12682.pdf_thumb-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/id-12682.12682.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-12682.12682.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/python-courses/complete-and-detailed-course-pandas-for-everyone-python-data-analysis">Complete and detailed course pandas for everyone: python data analysis</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-framework-java/tutoriel-sur-l-utilisation-du-framework-jdom-et-dom"><picture><source class=" lazyloading" width="145" height="190" data-srcset="/images/remos_downloads/id-11819.11819.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/id-11819.11819.pdf_thumb-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/id-11819.11819.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-11819.11819.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-framework-java/tutoriel-sur-l-utilisation-du-framework-jdom-et-dom">Tutoriel sur l’utilisation du Framework JDOM et DOM</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-python/cours-python-les-fonctions-les-modules-les-classes-et-les-exceptions"><picture><source class=" lazyloading" width="145" height="190" data-srcset="/images/remos_downloads/CoursPython-id5099.5099.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/CoursPython-id5099.5099.pdf_thumb-min.webp"><img class=" ls-is-cached lazyloaded" width="145" height="190" data-src="/images/remos_downloads/CoursPython-id5099.5099.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/CoursPython-id5099.5099.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-python/cours-python-les-fonctions-les-modules-les-classes-et-les-exceptions">Cours Python : les fonctions, les modules, les classes et les exceptions</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-python/tutoriel-general-en-pdf-de-python"><picture><source class="lazyload" width="145" height="190" data-srcset="/images/remos_downloads/coursPython-id4574.4574.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/coursPython-id4574.4574.pdf_thumb-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/coursPython-id4574.4574.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/coursPython-id4574.4574.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-python/tutoriel-general-en-pdf-de-python">Tutoriel général de Python</a></h4></div><div class="latestremo_elem_dow"><a href="https://www.cours-gratuit.com/cours-arduino/tutoriel-arduino-pdf-avec-exemples-d-application"><picture><source class="lazyload" width="145" height="190" data-srcset="/images/remos_downloads/id-10510.10510.pdf_thumb-min.webp" type="image/webp" srcset="/images/remos_downloads/id-10510.10510.pdf_thumb-min.webp"><img class=" lazyloaded" width="145" height="190" data-src="/images/remos_downloads/id-10510.10510.pdf_thumb-min.jpg" alt="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-10510.10510.pdf_thumb-min.jpg"></picture></a><h4><a href="https://www.cours-gratuit.com/cours-arduino/tutoriel-arduino-pdf-avec-exemples-d-application">Tutoriel Arduino avec exemples d'application</a></h4></div></div> <ins class="adsbygoogle" style="display: block; height: 600px;" data-ad-client="ca-pub-4450901223521136" data-ad-slot="1894489001" data-ad-format="auto" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_3_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_3_anchor" style="border: none; height: 600px; width: 300px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:300px;height:600px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="300" height="600" frameborder="0" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/ads(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!4" data-google-query-id="CJXS9-zSw_QCFV2E7QoduWkF0Q" data-load-complete="true"></iframe></ins></ins></ins>
+<script type="text/javascript">
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script> </div>
+<div class="left">
+<div class="rt-articleinfo">
+<span class="rt-date-posted">
+Publié le 06 Novembre 2020 </span>
+<span class="rt-author">
+par <b>
+Mouhtat Bilal </b>
+</span>
+</div>
+<picture><source media="(min-width:769px)" srcset="/images/thumb/171/id-3551.webp" type="image/webp"><source media="(max-width: 768px)" srcset="/images/thumb/171/id-3551-min.webp" type="image/webp"><source media="(max-width: 768px)" srcset="/images/thumb/171/id-3551-min.jpg" type="image/jpg"> <img class="artpreview" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/id-3551.png" width="660" height="340" alt=""></picture><div class="bannermobads">
+<ins class="adsbygoogle" style="display:block;width:100%" data-ad-client="ca-pub-4450901223521136" data-ad-slot="1894489001" data-ad-format="horizontal" data-adsbygoogle-status="done"></ins><script type="text/javascript">(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><div>
+<p></p>
+<h3>
+<a id="_Toc51862813"></a>Table des matières :</h3>
+<p style="padding-left: 30px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862814">Introduction&nbsp;</a></p>
+<ol>
+<li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862815">Qu'est-ce qu'un fichier csv ?</a></li>
+<li><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862816">Le module csv de python&nbsp;</a></li>
+</ol>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862817">2.1 Fonctions du module csv&nbsp;</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862818">2.2 Les modes d'ouverture d'un fichier csv dans python</a></p>
+<p style="padding-left: 30px;">3.&nbsp;<a style="font-family: inherit; font-size: 1rem; background-color: inherit;" href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862819">Comment lire un fichier csv ?&nbsp;</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862820">3.1 Lire un fichier csv en utilisant la fonction reader()&nbsp;</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862821">3.2 Comment lire un csv a l'aide de l'objet dictionnaire</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862822">3.3 Lire des fichiers csv avec pandas</a></p>
+<p style="padding-left: 30px;">4.&nbsp;<a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862823">Comment écrire ou modifier un fichier csv ?</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862824">4.1 Créer un fichier csv&nbsp;</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862825">4.2 Modifier ou écrire dans un fichier csv existant</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862826">4.3 Ecrire dans un fichier csv avec pandas</a></p>
+<p style="padding-left: 30px;">5.&nbsp;<a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862827">Cas pratiques</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862828">Cas pratiques&nbsp;1</a></p>
+<p style="padding-left: 60px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862829">Cas pratique 2</a></p>
+<p style="padding-left: 30px;">6.&nbsp;<a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862830">Correction&nbsp;</a></p>
+<p style="padding-left: 30px;"><a href="https://www.cours-gratuit.com/tutoriel-python/tutoriel-python-comment-importer-lire-et-modifier-un-fichier-csv-en-python#_Toc51862831">Conclusion</a></p>
+<h2>
+<a id="_Toc51862814"></a>Introduction</h2>
+<p>Dans ce tutoriel, nous vous montrons comment commencer à travailler avec des fichiers csv en python. Que ce soit pour créer de nouveaux fichiers csv en python, modifier des fichiers csv existants en python ou simplement lire un fichier et faire des choses avec les données en python.</p>
+<p>Le tutoriel couvre ce processus à l'aide de la bibliothèque intégrée python csv. Il existe d'autres moyens de le faire en python, mais cette méthode est celle qui sera probablement la plus longue, car elle utilise une partie de la bibliothèque python standard. Pour une alternative, on va utiliser des fichiers csv avec des pandas en python.</p>
+<p>La première partie du tutoriel détaillera le processus de lecture d'un fichier csv qui existe déjà en python. Vous verrez comment commencer à manipuler les données à l'intérieur du fichier csv car nous les imprimerons à l'écran en utilisant python. Cependant, vous pouvez facilement ajouter les données chargées dans une structure de données pour effectuer toutes les manipulations supplémentaires qui pourraient être nécessaires.</p>
+<p>Ensuite, vous apprendrez à créer votre propre fichier csv en utilisant python. Dans notre exemple, nous allons créer un fichier csv qui contient des données de client comme un exemple. Enfin, vous allez comprendre comment écrire dans un fichier csv déjà existant avec python. Il est bon de noter que si vous changez simplement le nom du fichier dans lequel vous souhaitez écrire en utilisant cette méthode, cela génèrera également un tout nouveau fichier csv en addition à utiliser ¨Pandas pour lire et créer un contenu csv.</p>
+<h2>
+<a id="_Toc51862815"></a>1. Qu'est-ce qu'un fichier CSV ?</h2>
+<p>Un fichier CSV est un type de fichier texte brut qui utilise une structure spécifique pour organiser les données tabulaires. CSV est un format courant pour l'échange de données, car il est compact, simple et général. De nombreux services en ligne permettent à ses utilisateurs d'exporter des données tabulaires du site Web dans un fichier CSV. Les fichiers CSV s'ouvriront dans Excel, et presque toutes les bases de données ont un outil pour permettre l'importation à partir d'un fichier CSV. Le format standard est défini par des données de lignes et de colonnes. De plus, chaque ligne se termine par une nouvelle ligne pour commencer la ligne suivante. Toujours dans la ligne, chaque colonne est séparée par une virgule.</p>
+<p><strong>Exemple</strong></p>
+<p>Les données sous forme de tableaux sont également appelées CSV (valeurs séparées par des virgules) - littéralement « valeurs séparées par des virgules ». Il s'agit d'un format de texte destiné à la présentation de données tabulaires. Chaque ligne du fichier est une ligne du tableau.</p>
+<p>Les valeurs des colonnes individuelles sont séparées par un symbole de séparation - une virgule (,), un point-virgule (;) ou un autre symbole. CSV peut être facilement lu et traité par Python.</p>
+<p><strong>Tableau De données</strong></p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>Langage de programmation</p>
+</td>
+<td>
+<p>Créé par</p>
+</td>
+<td>
+<p>Apparu</p>
+</td>
+<td>
+<p>Extension</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Python</p>
+</td>
+<td>
+<p>Guido van Rossum</p>
+</td>
+<td>
+<p>1991</p>
+</td>
+<td>
+<p>.py</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Javascript</p>
+</td>
+<td>
+<p>Brendan Eich</p>
+</td>
+<td>
+<p>1995</p>
+</td>
+<td>
+<p>.js</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>PHP</p> 
+</td>
+<td>
+<p>Rasmus Lerdorf</p>
+</td>
+<td>
+<p>1994</p>
+</td>
+<td>
+<p>.php</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Vous pouvez représenter ce tableau en csv comme ci-dessous.</p>
+<p style="padding-left: 30px;"><strong>Langage de programmation, créé par, apparu, extension</strong></p>
+<p style="padding-left: 30px;"><strong>Python, Guido van Rossum, 1991, .py</strong></p>
+<p style="padding-left: 30px;"><strong>JavaScript, Brendan Eich, 1995, .js</strong></p>
+<p style="padding-left: 30px;"><strong>PHP, Rasmus Lerdof, 1995, .php</strong></p>
+<p></p>
+<h2>
+<a id="_Toc51862816"></a>2. Le module CSV de python</h2>
+<p>Python fournit un module CSV pour gérer les fichiers CSV. Pour lire / écrire des données, vous devez parcourir les lignes du CSV. Vous devez utiliser la méthode de fractionnement pour obtenir des données à partir de colonnes spécifiées.</p>
+<h3>
+<a id="_Toc51862817"></a>2.1 Fonctions du module CSV</h3>
+<p>Dans le tableau suivant, vous pouvez trouver toutes les fonctions liées au module csv&nbsp;:</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Fonctions</strong></p>
+</td>
+<td>
+<p><strong>Interprétations</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.field_size_limit</strong></p>
+</td>
+<td>
+<p>Renvoie la taille maximale du champ</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.get_dialect</strong></p>
+</td>
+<td>
+<p>Obtenir le dialecte associé au nom</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.list_dialects</strong></p>
+</td>
+<td>
+<p>Afficher tous les dialectes enregistrés</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.reader</strong></p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.register_dialect</strong></p>
+</td>
+<td>
+<p>Associer le dialecte au nom de fichier</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.writer</strong></p>
+</td>
+<td>
+<p>Écrire des données dans un fichier csv</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.unregister_dialect</strong></p>
+</td>
+<td>
+<p>Supprimer le dialecte associé au nom du registre des dialectes</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.QUOTE_ALL</strong>&nbsp;</p>
+</td>
+<td>
+<p>Citez tout, quel que soit le type.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.QUOTE_MINIMAL</strong>&nbsp;</p>
+</td>
+<td>
+<p>Citer les champs avec des caractères spéciaux</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.QUOTE_NONNUMERIC</strong>&nbsp;</p>
+</td>
+<td>
+<p>Citez tous les champs qui ne sont pas des nombres</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>csv.QUOTE_NONE</strong>&nbsp;</p>
+</td>
+<td>
+<p>Ne citez rien en sortie</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Dans ce tutoriel, nous allons nous concentrer uniquement sur les fonctions de lecture et d'écriture qui vous permettent d'éditer, de modifier et de manipuler les données dans un fichier CSV</p>
+<h3>
+<a id="_Toc51862818"></a>2.2 Les modes d'ouverture d'un fichier csv dans python</h3>
+<p>Les modes d'accès disponibles pour un fichier csv sont les suivants :</p>
+<p><strong>r</strong>: Ouvre le fichier en mode lecture seule. Démarre la lecture depuis le début du fichier et constitue le mode par défaut de la fonction open ().</p>
+<p><strong>rb</strong>: ouvre le fichier en lecture seule au format binaire et commence la lecture depuis le début du fichier. Bien que le format binaire puisse être utilisé à des fins différentes, il est généralement utilisé pour traiter des éléments tels que des images, des vidéos, etc.</p>
+<p><strong>r</strong>&nbsp;+: Ouvre le fichier en lecture et en écriture, en plaçant le pointeur au début du fichier.</p>
+<p><strong>w</strong>: s'ouvre en mode écriture seule. Le pointeur est placé au début du fichier et cela écrasera tout fichier existant avec le même nom. Il créera un nouveau fichier si un avec le même nom n'existe pas.</p>
+<p><strong>wb</strong>&nbsp;: ouvre le fichier en écriture seule en mode binaire.</p>
+<p><strong>w +</strong>&nbsp;: ouvre le fichier pour l'écriture et la lecture.</p>
+<p><strong>wb</strong>&nbsp;+ : Ouvre le fichier pour l'écriture et la lecture en mode binaire.</p>
+<p><strong>a</strong>&nbsp;: Ouvre le fichier pour y ajouter de nouvelles informations. Le pointeur est placé à la fin du fichier. Un nouveau fichier est créé s'il n'y en a pas avec le même nom.</p>
+<p><strong>ab</strong>: Ouvre le fichier à ajouter en mode binaire.</p>
+<p><strong>a +</strong>&nbsp;: ouvre le fichier pour l'ajout et la lecture.</p>
+<p><strong>ab</strong>&nbsp;+ : Ouvre le fichier pour l'ajout et la lecture en mode binaire.</p>
+<p>Vous allez mieux comprendre ces modes lorsque vous verrez les exemples de ce didacticiel ci-dessous</p>
+<h2>
+<a id="_Toc51862819"></a>3. Comment lire un fichier CSV</h2>
+<p>Sans l'aide d'un programme spécial pour faire afficher les données du fichier dans un format tabulaire soigné, chaque ligne est juste une ligne dans le fichier. Et chaque valeur unique est séparée par une virgule. Par exemple, ouvrir le fichier illustré dans le tableau dans un éditeur de texte simple comme Notepad ou BlocNote montre ce qui est réellement stocké dans le fichier.</p>
+<p><picture><source class=" lazyloading" data-src="/images/tuto-python/3551/image002.webp" type="image/webp" src="/images/tuto-python/3551/image002.webp"><img class=" lazyloaded" width="626" height="123" data-src="/images/tuto-python/3551/image002.jpg" alt="" style="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/image002.jpg"></picture></p>
+<p>Cela semble beaucoup plus complexe qu'il ne l'est. Jetons un coup d'œil à cet exemple et nous découvrirons que travailler avec un fichier csv n'est pas si difficile.</p>
+<h3>
+<a id="_Toc51862820"></a>3.1 Lire un fichier csv en utilisant la fonction Reader()</h3>
+<p>Pour lire des données à partir de fichiers CSV, vous devez utiliser la fonction de reader pour générer un objet reader.</p>
+<p>La fonction reader est développée pour prendre chaque ligne du fichier et faire une liste de toutes les colonnes. Ensuite, vous devez choisir la colonne pour laquelle vous voulez les données variables.</p>
+<p>Cela semble beaucoup plus complexe qu'il ne l'est. Jetons un coup d'œil à cet exemple et nous découvrirons que travailler avec un fichier csv n'est pas si difficile.</p>
+<p><strong>Syntaxe :</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> csv;<br>f= open (<span class="hljs-string">r"C:\Users\HP\Desktop/data.csv"</span>) <br>myReader = csv.reader(f) <br><span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> myReader:<br>print(row)</code></p>
+<p><strong>Résultat de l’exécution&nbsp;:</strong></p>
+<p><picture><source class=" lazyloading" data-src="/images/tuto-python/3551/image003.webp" type="image/webp" src="/images/tuto-python/3551/image003.webp"><img class=" lazyloaded" width="578" height="123" data-src="/images/tuto-python/3551/image003.jpg" alt="" style="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/image003.jpg"></picture></p>
+<p><strong><em>Téléchargez le fichier data.csv pour comprendre facilement :&nbsp;</em></strong><a href="https://drive.google.com/u/0/uc?id=1oM7Porm2bKfHueJphMgZd3o_vHRTuJnC&amp;export=download">https://drive.google.com/u/0/uc?id=1oM7Porm2bKfHueJphMgZd3o_vHRTuJnC&amp;export=download</a></p>
+<h3>
+<a id="_Toc51862821"></a>3.2 Comment lire un CSV à l'aide de l'objet dictionnaire</h3>
+<p>Vous pouvez également utiliser DictReader pour lire les fichiers CSV. Les résultats sont interprétés comme un dictionnaire où la ligne d'en-tête est la clé et les autres lignes sont des valeurs.</p>
+<p>Considérez le code suivant&nbsp;:</p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> pandas<br>lire = pandas.read_csv(<span class="hljs-string">r"C:\Users\HP\Desktop/data.csv"</span>)<br>print(lire)<br> </code></p>
+<p></p>
+<p><strong>Résultat de l’exécution&nbsp;:</strong></p>
+<p><picture><source class=" lazyloading" data-src="/images/tuto-python/3551/image004.webp" type="image/webp" src="/images/tuto-python/3551/image004.webp"><img class=" lazyloaded" width="578" height="122" data-src="/images/tuto-python/3551/image004.jpg" alt="" style="" src="https://www.cours-gratuit.com/images/tuto-python/3551/image004.jpg"></picture></p>
+<p>Et cette façon de lire les données à partir d'un fichier CSV est beaucoup plus facile. Cependant, ce n'est pas la meilleure façon de lire les données.</p>
+<h3>
+<a id="_Toc51862822"></a> 3.3 Lire des fichiers CSV avec Pandas</h3>
+<p>Pandas est une bibliothèque Open Source qui vous permet d'effectuer des manipulations de données en Python. Les pandas offrent un moyen simple de créer, manipuler et supprimer les données.</p>
+<p>Parfois vous devez installer la bibliothèque pandas avec la commande &lt;code&gt; pip install pandas &lt;/code&gt;. Sous Windows, vous exécuterez cette commande dans l'invite de commande sous Linux dans le terminal.</p>
+<p>La lecture du CSV dans un DataFrame pandas est très simple et rapide</p>
+<p><strong>Exemple&nbsp;:</strong></p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> csv<br>reader = csv.DictReader(open(<span class="hljs-string">r"C:\Users\HP\Desktop/data.csv"</span>))<br><span class="hljs-keyword">for</span> raw <span class="hljs-keyword">in</span> reader:<br>print(raw)<br> </code></p>
+<p><strong>Résultat d’exécution :</strong></p>
+<p><picture><source class="lazyload" data-src="/images/tuto-python/3551/image005.webp" type="image/webp"><img class="lazyload" width="639" height="141" data-src="/images/tuto-python/3551/image005.jpg" alt="" style=""></picture></p>
+<p>Cette bibliothèque est très utile. En seulement trois lignes de code, vous obtenez le même résultat que précédemment. Les pandas savent que la première ligne du CSV contenait des noms de colonnes, et il les utilisera automatiquement.</p>
+<h4>3.3.1 Lire uniquement des colonnes spécifiques du fichier CSV</h4>
+<p>Nous pouvons spécifier le paramètre&nbsp;<strong>usecols</strong>&nbsp;pour lire des colonnes spécifiques à partir du fichier CSV. Ceci est très utile lorsque le fichier CSV comporte de nombreuses colonnes mais que nous ne nous intéressons qu'à quelques-unes d'entre elles.</p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> pandas<br>sortie = pandas.read_csv(<span class="hljs-string">'résultatt.csv'</span>, usecols=[<span class="hljs-string">'E-mail'</span>, <span class="hljs-string">'Nom'</span>])<br>print(emp_df)<br> </code></p>
+<p><strong>Résultat d’exécution&nbsp;:</strong></p>
+<p><picture><source class="lazyload" data-src="/images/tuto-python/3551/image006.webp" type="image/webp"><img class="lazyload" width="578" height="144" data-src="/images/tuto-python/3551/image006.jpg" alt="" style=""></picture></p>
+<h4>3.3.2 Lire un fichier CSV sans en-tête</h4>
+<p>Il n'est pas obligatoire d'avoir une ligne d'en-tête dans le fichier CSV. Si le fichier CSV n'a pas de ligne d'en-tête, nous pouvons toujours le lire en passant header = None à la fonction read_csv ().</p>
+<p>Utilisons le même fichier du dernier exemple&nbsp;:</p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> pandas<br>sortie = pandas.read_csv(<span class="hljs-string">'résultat.csv'</span>, usecols=[<span class="hljs-string">'E-mail'</span>, <span class="hljs-string">'Nom'</span>])<br>print(sortie)<br> </code></p>
+<p><strong>Résultat d’exécution&nbsp;:</strong></p>
+<p><picture><source class="lazyload" data-src="/images/tuto-python/3551/image007.webp" type="image/webp"><img class="lazyload" width="579" height="157" data-src="/images/tuto-python/3551/image007.jpg" alt="" style=""></picture></p>
+<h4>3.3.3 Spécification du délimiteur avec la fonction Pandas read_csv ()</h4>
+<p>Le délimiteur par défaut d'un fichier CSV est une virgule. Mais nous pouvons également utiliser n'importe quel autre délimiteur. Supposons que notre délimiteur de fichier CSV soit #.</p>
+<p>On va exécuter le code suivant&nbsp;:</p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> pandas<br>sortie = pandas.read_csv(<span class="hljs-string">'résultat.csv'</span>, sep=<span class="hljs-string">'#'</span>,)<br> print(sortie)</code></p>
+<p><strong>Résultat d’exécution&nbsp;:</strong></p>
+<p><strong><picture><source class="lazyload" data-src="/images/tuto-python/3551/image008.webp" type="image/webp"><img class="lazyload" width="601" height="160" data-src="/images/tuto-python/3551/image008.jpg" alt="" style=""></picture></strong></p>
+<h2>
+<a id="_Toc51862823"></a> 4. Comment écrire ou modifier un fichier CSV</h2>
+<h3>
+<a id="_Toc51862824"></a>4.1 Créer un fichier csv</h3>
+<p>Lorsque vous avez un ensemble de données que vous souhaitez stocker dans un fichier CSV, vous devez utiliser la fonction writer (). Pour itérer les données sur les lignes (lignes), vous devez utiliser la fonction writerow ().</p>
+<p>Prenons l'exemple suivant, on va essayer de créer un fichier csv qui contient les informations des clients</p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> csv<br><span class="hljs-keyword">with</span> open(<span class="hljs-string">'data2.csv'</span>,<span class="hljs-string">'w'</span>,newline=<span class="hljs-string">''</span>) <span class="hljs-keyword">as</span> fichiercsv:<br>writer=csv.writer(fichiercsv)<br>writer.writerow([<span class="hljs-string">'Nom'</span>, <span class="hljs-string">'Prénom'</span>; <span class="hljs-string">'E-mail'</span>, <span class="hljs-string">'Télephone'</span>])<br>writer.writerow([<span class="hljs-string">'Depond'</span>, <span class="hljs-string">'Marcel'</span>, <a href="mailto:&#39;Marcel@gmail.com&#39;"><span class="hljs-string">'Marcel@gmail.com'</span></a>, <span class="hljs-string">'1020304050'</span>])<br>writer.writerow([<span class="hljs-string">'Alicat'</span>, <span class="hljs-string">'Patricia'</span>, <a href="mailto:&#39;Alicatpa@gmail.com&#39;"><span class="hljs-string">'Alicatpa@gmail.com'</span></a>, <span class="hljs-string">'1224455660'</span>])<br>writer.writerow([<span class="hljs-string">'Muller'</span>, <span class="hljs-string">'Antoni'</span>, <a href="mailto:&#39;Antoni.muller@gmail.com&#39;"><span class="hljs-string">'Antoni.muller@gmail.com'</span></a>, <span class="hljs-string">'1669988445'</span>])<br>writer.writerow([<span class="hljs-string">'Massont'</span>, <span class="hljs-string">'Rodulf'</span>, <a href="mailto:&#39;Massant.rodulf@gmail.com&#39;"><span class="hljs-string">'Massant.rodulf@gmail.com'</span></a>, <span class="hljs-string">'1669988444'</span>])</code>&nbsp;</p>
+<p>Le résultat dans le fichier csv :</p>
+<p><picture><source class="lazyload" data-src="/images/tuto-python/3551/image009.webp" type="image/webp"><img class="lazyload" width="578" height="171" data-src="/images/tuto-python/3551/image009.jpg" alt="" style=""></picture></p>
+<h3>
+<a id="_Toc51862825"></a>4.2 Modifier ou écrire dans un fichier csv existant&nbsp;</h3>
+<p>Pour éditer un fichier csv existant, nous allons utiliser le mode Appendant (a)</p>
+<p>Dans cet exemple, nous allons essayer d'ajouter un nouveau client au fichier csv que nous avons créé avant (résultat.csv)&nbsp;:</p>
+<p><strong>Syntaxe&nbsp;:</strong></p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">import</span> csv<br><span class="hljs-keyword">with</span> open(<span class="hljs-string">'résultat.csv'</span>,<span class="hljs-string">'a'</span>,newline=<span class="hljs-string">''</span> encoding=<span class="hljs-string">'utf-8'</span>) <span class="hljs-keyword">as</span> fichiercsv:<br>writer=csv.writer(fichiercsv)<br>writer.writerow([<span class="hljs-string">'Duprez'</span>,<span class="hljs-string">'Andrée'</span>, <a href="mailto:&#39;Duprez.andr@gmail.com&#39;"><span class="hljs-string">'Duprez.andr@gmail.com'</span></a>, <span class="hljs-string">'1669987744'</span>])</code></p>
+<p>Ce code ajoutera une nouvelle ligne qui contient les informations client sous la dernière ligne&nbsp;:</p>
+<p><strong>Le résultat d’exécution :</strong></p>
+<p>Vous trouverez le fichier csv dans le répertoire par défaut ou celui que vous avez spécifié&nbsp;:</p>
+<p><picture><source class="lazyload" data-src="/images/tuto-python/3551/image010.webp" type="image/webp"><img class="lazyload" width="578" height="198" data-src="/images/tuto-python/3551/image010.jpg" alt="" style=""></picture></p>
+<h3>
+<a id="_Toc51862826"></a>4.3 Écrire dans un fichier csv avec Pandas</h3>
+<p>L'écriture dans un fichier CSV avec Pandas est aussi simple que la lecture. Ici, vous pouvez y convaincre. Vous devez d'abord créer DataFrame basé sur le code d’exemple suivant.</p>
+<p class="code-badge-pre"><div class="code-badge">
+        <div class="code-badge-language">python</div>
+        <div title="Copy to clipboard">
+            <i class="fa fa-copy code-badge-copy-icon"></i>
+        </div>
+     </div><code class="language-python hljs"><span class="hljs-keyword">from</span> pandas <span class="hljs-keyword">import</span> DataFrame<br>C = {<span class="hljs-string">'Nom'</span>: [<span class="hljs-string">'Depond'</span>,<span class="hljs-string">'Alicat'</span>, <span class="hljs-string">'Muller'</span>,<span class="hljs-string">'Massont'</span>],<br><span class="hljs-string">'Prénom'</span>: [<span class="hljs-string">'Marcel'</span>, <span class="hljs-string">'Patricia'</span>, <span class="hljs-string">'Antoni'</span>,<span class="hljs-string">'Rudolf'</span>],<br><span class="hljs-string">'E-mail'</span>: [<a href="mailto:&#39;Marcel@gmail.com&#39;"><span class="hljs-string">'Marcel@gmail.com'</span></a>, <a href="mailto:&#39;Alicatpa@gmail.com&#39;"><span class="hljs-string">'Alicatpa@gmail.com'</span></a>, <br><span class="hljs-string">'Antoni.muller@gmail.com'</span>,<a href="mailto:&#39;Massont.rudolf@gmail.com&#39;"><span class="hljs-string">'Massont.rudolf@gmail.com'</span></a>],<br> <span class="hljs-string">'Télephone'</span>: [<span class="hljs-string">'1020304050'</span>, <span class="hljs-string">'.1224455660'</span>, <span class="hljs-string">'1669988445'</span>,<span class="hljs-string">'1669988444'</span>],<br> }<br>données = DataFrame(C, columns= [<span class="hljs-string">'Nom'</span>, <span class="hljs-string">'Prénom'</span>, <span class="hljs-string">'E-mail'</span>, <span class="hljs-string">'Télephone'</span>])<br>export_csv = df.to_csv (<span class="hljs-string">'resultat.csv'</span>, index = <span class="hljs-literal">None</span>, header=<span class="hljs-literal">True</span>, encoding=<span class="hljs-string">'utf-8'</span>, sep=<span class="hljs-string">';'</span>)<br>print(données)</code></p>
+<p><strong>Résultat d’exécution&nbsp;:</strong></p>
+<p>Un fichier CSV est créé à l'emplacement spécifié&nbsp;:</p>
+<p><strong><picture><source class="lazyload" data-src="/images/tuto-python/3551/image011.webp" type="image/webp"><img class="lazyload" width="578" height="174" data-src="/images/tuto-python/3551/image011.jpg" alt="" style=""></picture></strong><strong>&nbsp;</strong></p>
+<p><strong>Remarque :&nbsp;</strong>Pour obtenir un fichier csv bien organisé comme celui de l'exemple, essayez d'utiliser le point-virgule (sep=’&nbsp;;’) comme délimiteur et utf-8 comme format d'encodage (encoding=’utf-8’).</p>
+<h2>
+<a id="_Toc51862827"></a>5. Cas Patiques</h2>
+<h3>
+<a id="_Toc51862828"></a>Cas pratiques&nbsp;1 :</h3>
+<p>Considérez le fichier csv (thé-info.csv) suivant qui contient des informations sur l'infusion de thé&nbsp;:</p>
+<p><picture><source class="lazyload" data-src="/images/tuto-python/3551/image012.webp" type="image/webp"><img class="lazyload" width="564" height="208" data-src="/images/tuto-python/3551/image012.jpg" alt="" style=""></picture></p>
+<p><strong>Questions&nbsp;:</strong></p>
+<p style="padding-left: 30px;">1. Ouvrez le fichier appelé thé-info.csv en mode lecture.</p>
+<p><strong>Remarque</strong> : il est prévu que le fichier thé-info.csv se trouve dans le même répertoire que votre fichier .py</p>
+<p style="padding-left: 30px;">2. Utilisez csv.reader pour lire le contenu du fichier thé-info.csv.</p>
+<p>Les fichiers CSV sont séparés par des virgules et, à ce titre, une virgule est utilisée comme délimiteur</p>
+<p style="padding-left: 30px;">3. Utilisez csv.DictReader pour lire le contenu du fichier thé-info.csv.</p>
+<p style="padding-left: 30px;">4. Utilisez Pandas pour lire le fichier thé-info.csv</p>
+<h3>
+<a id="_Toc51862829"></a>Cas pratique 2 :</h3>
+<p><strong>Données :</strong></p>
+<p>Dans le tableau suivant, nous avons des informations sur certains employés et nous voulons les transformer en fichier csv en utilisant python</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Nom d'utilisateur</strong></p>
+</td>
+<td>
+<p><strong>Entreprise</strong></p>
+</td>
+<td>
+<p><strong>Salaire</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>William</strong></p>
+</td>
+<td>
+<p>Google</p>
+</td>
+<td>
+<p>75</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Rudolf</strong></p>
+</td>
+<td>
+<p>Amazon</p>
+</td>
+<td>
+<p>43</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>John</strong></p>
+</td>
+<td>
+<p>Walmart</p>
+</td>
+<td>
+<p>65</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Dupond</strong></p>
+</td>
+<td>
+<p>Microsoft</p>
+</td>
+<td>
+<p>94</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&nbsp;</strong></p>
+<p><strong>Questions&nbsp;:</strong></p>
+<ol>
+<li>Ouvrez un fichier appelé nouveau-file.csv en mode écriture.</li>
+</ol>
+<p><strong>Remarque</strong> : en mode écriture, si le fichier n'existe pas, il sera créé</p>
+<ol start="2">
+<li>En utilisant l'objet writer, essayez de créer un fichier csv contenant les données du tableau ci-dessus</li>
+<li>Utilisez Pandas pour créer le même fichier<strong style="color: inherit; font-family: inherit; font-size: 1rem; background-color: inherit;">&nbsp;</strong>
+</li>
+</ol>
+<p><strong>Remarque&nbsp;:</strong> Utiliser le semi-colon (;) comme un délimite<strong>&nbsp;</strong></p>
+<h2>
+<a id="_Toc51862830"></a>6.Crrection :</h2>
+<p><strong>Cas pratique 1&nbsp;:</strong></p>
+<p><strong>Syntaxe et résultat</strong><strong>&nbsp;:</strong></p>
+<p><strong><picture><source class="lazyload" data-src="/images/tuto-python/3551/image013.webp" type="image/webp"><img class="lazyload" width="594" height="254" data-src="/images/tuto-python/3551/image013.png" alt="" style=""></picture></strong></p>
+<p><strong>Cas pratique 2&nbsp;:</strong></p>
+<p><strong>Syntaxe et résultat&nbsp;:</strong></p>
+<p><strong><picture><source class="lazyload" data-src="/images/tuto-python/3551/image014.webp" type="image/webp"><img class="lazyload" width="559" height="216" data-src="/images/tuto-python/3551/image014.jpg" alt="" style=""></picture></strong></p>
+<p><strong>Résultat dans le fichier csv&nbsp;:</strong></p>
+<p><strong><picture><source class="lazyload" data-src="/images/tuto-python/3551/image015.webp" type="image/webp"><img class="lazyload" width="578" height="128" data-src="/images/tuto-python/3551/image015.jpg" alt="" style=""></picture></strong></p>
+<p><strong>&nbsp;</strong></p>
+<h2>
+<a id="_Toc51862831"></a>Conclusion</h2>
+<p>En arrivant à la fin du tutoriel, je voulais vous dire que vous avez appris les moyens les plus importants d'éditer et de lire un fichier csv en Python.</p>
+<p>Les fichiers CSV sont un format de stockage de fichiers pratique que de nombreux développeurs utilisent dans leurs projets. Ils sont petits, faciles à gérer et largement utilisés tout au long du développement logiciel. Heureusement pour vous, Python a un module dédié qui fournit des méthodes et des classes flexibles pour gérer les fichiers CSV de manière simple et efficace.</p>
+<p>Dans ce tutoriel, nous vous avons montré comment utiliser le module Python csv pour lire et écrire des données CSV dans un fichier. En plus de cela, nous avons également montré comment créer des dialectes et utiliser des classes d'assistance comme DictReader et DictWriter pour lire et écrire des CSV, en plus de la façon d'utiliser Pandas pour lire / écrire un fichier csv</p>
+<p>En fait, ce n'est pas si difficile à apprendre qu'il y paraît au début. Mais avec un peu de pratique, vous le maîtriserez.</p>
+<p>Si vous souhaitez approfondir le sujet, vous pouvez en savoir plus sur les fichiers CSV dans la documentation officielle de Python.</p>
+</div>
+<script type="text/javascript">
+document.getElementById('scptloadjs').addEventListener('load', (event) => { hljs.configure({useBR:true,languages:['python', 'excel']}); document.querySelectorAll('.rt-article p>code').forEach((block) => { hljs.highlightBlock(block);});});
+document.getElementById('scptloadjs').addEventListener('load', (event) => {var options = { contentSelector: ".rt-article",copyIconClass: "fa fa-copy",checkIconClass: "fa fa-check text-success",}; window.highlightJsBadge(options);});
+</script> </div>
+<p class="rt-article-cat">
+<span class="rt-category">
+<a href="https://www.cours-gratuit.com/tutoriel-python/"> Tutoriel Python </a> </span>
+</p>
+</div>
+<div class="clear"></div>
+</div>
+<script type="text/javascript">(adsbygoogle = window.adsbygoogle || []).onload = function () {
+        [].forEach.call(document.getElementsByClassName('lazyadsto'), function () {adsbygoogle.push({})})}</script>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="rt-bottom">
+<div class="rt-container">
+<div class="rt-grid-6 rt-alpha">
+<div class="rt-block">
+<div class="module-surround">
+<div class="module-content">
+<ul class="menu"><li class="item187"><a href="https://www.cours-gratuit.com/contact"><span>Contactez-nous</span></a></li><li class="item186"><a href="https://www.cours-gratuit.com/notre-equipe"><span>A propos de nous</span></a></li><li class="item246"><a href="https://www.cours-gratuit.com/espace-recrutement/"><span>On recrute</span></a></li><li class="item240"><a href="https://www.cours-gratuit.com/trouver"><span>Rechercher dans le site</span></a></li><li class="item309"><a href="https://www.cours-gratuit.com/privacy-policy" target="_blank"><span>Politique de confidentialité</span></a></li><li class="item241"><a href="https://www.cours-gratuit.com/droits-dauteur-copyright-dmca"><span>Droit d'auteur/Copyright</span></a></li></ul> </div>
+</div>
+</div>
+</div>
+<div class="rt-grid-6 rt-omega">
+<div class="rt-block">
+<div class="module-surround">
+<div class="module-content">
+<ul class="menu"><li class="item271"><a href="https://www.cours-gratuit.com/blog/"><span>Blog</span></a></li><li class="item177"><a href="https://www.cours-gratuit.com/etudes-metiers/"><span>Etudes et métiers</span></a></li><li class="item263"><a href="https://www.cours-gratuit.com/cours-informatique/"><span>Informatique</span></a></li><li class="item265"><a href="https://www.cours-gratuit.com/cours-comptabilite/"><span>Comptabilité</span></a></li><li class="item267"><a href="https://www.cours-gratuit.com/cours-economie/"><span>Economie</span></a></li><li class="item287"><a href="https://www.cours-gratuit.com/cours-marketing/"><span>Marketing</span></a></li><li class="item289"><a href="https://www.cours-gratuit.com/cours-management/"><span>Management</span></a></li><li class="item292"><a href="https://www.cours-gratuit.com/cours-gestion/"><span>Gestion</span></a></li><li class="item420"><a href="https://www.cours-gratuit.com/cours-statistique/"><span>Statistiques</span></a></li><li class="item422"><a href="https://www.cours-gratuit.com/cours-finance/"><span>Finance</span></a></li><li class="item426"><a href="https://www.cours-gratuit.com/cours-commerce/"><span>Commerce</span></a></li><li class="item333"><a href="https://www.cours-gratuit.com/cours-electronique/"><span>Electronique</span></a></li><li class="item424"><a href="https://www.cours-gratuit.com/cours-electricite/"><span>Electricité</span></a></li><li class="item230"><a href="https://www.cours-gratuit.com/sci-tech/"><span>Sci-Tech</span></a></li></ul> </div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="footerOOOads">
+<span id="closOOOe" onclick="if (!window.__cfRLUnblockHandlers) return false; this.parentNode.parentNode.removeChild(this.parentNode); return false;"></span>
+</div>
+<script async="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/lazysizes.min.js.téléchargement" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() { $('span.starss').starss();});
+</script>
+<script defer="" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/v64f9daad31f64f81be21cbef6184a5e31634941392597" integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A==" data-cf-beacon="{&quot;rayId&quot;:&quot;6b6fbe16dd614401&quot;,&quot;token&quot;:&quot;bf89e6b085254a64a7bc88fab536ec77&quot;,&quot;version&quot;:&quot;2021.11.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_0_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_0_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/ads(3).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-load-complete="true"></iframe></ins></ins></ins><style>
+@media print {
+   .code-badge { display: none; }
+}
+    .code-badge-pre {
+        position: relative;
+width: 85%;
+margin: 0 0px 0px 20px;
+}
+    .code-badge {
+        display: flex;
+        flex-direction: row;
+        white-space: normal;
+        background: transparent;
+        background: #333;
+        color: white;
+        font-size: 0.875em;
+        opacity: 0.5;
+        transition: opacity linear 0.5s;
+        border-radius: 0 0 0 7px;
+        padding: 5px 8px 5px 8px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .code-badge.active {
+        opacity: 0.8;
+    }
+
+    .code-badge:hover {
+        opacity: .95;
+    }
+
+    .code-badge a,
+    .code-badge a:hover {
+        text-decoration: none;
+    }
+
+    .code-badge-language {
+        margin-right: 10px;
+        font-weight: 600;
+        color: goldenrod;
+    }
+    .code-badge-copy-icon {
+        font-size: 1.2em;
+        cursor: pointer;
+        padding: 0 7px;
+        margin-top:2;
+    }
+    .fa.text-success:{ color: limegreen !important }
+</style><div id="CodeBadgeTemplate" style="display:none">
+    <div class="code-badge">
+        <div class="code-badge-language">{{language}}</div>
+        <div title="Copy to clipboard">
+            <i class="{{copyIconClass}} code-badge-copy-icon"></i>
+        </div>
+     </div>
+</div><table cellspacing="0" cellpadding="0" class="gstl_50 gssb_c" style="width: 257px; display: none; top: 64px; left: 1050px; position: absolute;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table><iframe src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/aframe.html" width="0" height="0" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" data-anchor-shown="true" style="display: block; width: 1920px !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;" data-ad-status="filled"><ins class="ee" style="inset: auto !important; clear: none !important; display: block !important; float: none !important; height: 5px !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: relative !important; vertical-align: baseline !important; visibility: visible !important; width: auto !important; z-index: 1 !important; background-color: rgb(250, 250, 250) !important; box-shadow: rgba(0, 0, 0, 0.2) 0px -1px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px !important;"><span style="display: block !important; width: 80px !important; height: 45px !important; bottom: 0px !important; left: 0% !important; pointer-events: none !important;"><svg style="margin: 0px !important; position: absolute !important; bottom: 0px !important; left: 0% !important; display: block !important; width: 80px !important; height: 30px !important; transform: none !important; pointer-events: initial !important;"><defs><filter id="dropShadowTop" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><fecomponenttransfer in="SourceAlpha" result="TransferredAlpha"><fefuncr type="discrete" tableValues="0.5"></fefuncr><fefuncg type="discrete" tableValues="0.5"></fefuncg><fefuncb type="discrete" tableValues="0.5"></fefuncb></fecomponenttransfer><fegaussianblur in="TransferredAlpha" stdDeviation="2"></fegaussianblur><feoffset dx="0" dy="0" result="offsetblur"></feoffset><femerge><femergenode></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><path d="M0,26 L0,6 A6,6 0 0,1 6,1 L50,1 A6,6 0 0,1 56,6 L56,20 A6,6 0 0,0 62,26 Z" stroke="#FAFAFA" stroke-width="1" fill="#FAFAFA" style="filter: url(&quot;#dropShadowTop&quot;);"></path><rect x="0" y="25" width="80" height="5" style="fill: rgb(250, 250, 250);"></rect><g class="down" stroke="#616161" stroke-width="2px" stroke-linecap="square"><line x1="22" y1="12" x2="28" y2="18"></line><line x1="28" y1="18" x2="34" y2="12"></line></g></svg></span></ins><ins id="aswift_5_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_5_anchor" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_5" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/zrt_lookup.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!6" data-google-query-id="CPL07OzSw_QCFVLV7Qod9Y4FrQ" data-load-complete="true" style="display: block; margin: 0px auto;"></iframe></ins></ins></ins></body><iframe id="google_esf" name="google_esf" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/zrt_lookup(1).html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><ins id="aswift_4_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_4_anchor" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_4" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" src="./Tutoriel Python _ importer, lire et modifier un fichier CSV_files/zrt_lookup(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!5" data-google-query-id="CPH07OzSw_QCFVLV7Qod9Y4FrQ" data-load-complete="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;"></iframe></ins></ins></ins></html>
