@@ -94,6 +94,7 @@ def extract_ind_tel(fichcsv):
     source : https://fr.wikipedia.org/wiki/Liste_des_indicatifs_t%C3%A9l%C3%A9phoniques_en_France
     :return: 5 listes où chacunes des listes contient les départements concernés par l'indicatif
     exedmple IND01 contient une liste des département pour l'indicatif 01, etc
+    INDICATIF_01 = ['75', '77', '78', '91', '92', '93', '94', '95']
     """
     with open(fichcsv) as f:
         recup = csv.reader(f, delimiter=';')
