@@ -22,6 +22,8 @@ Longitude/latitude en DMS (Degré Minute Seconde) : géolocalisation exprimée e
 Altitude minimale/maximale : hauteur minimum et maximum de la ville par rapport au niveau de l’eau
 """
 
+import csv
+
 INDEX_VILLES = ['Departement',              # int
                 'Slug',                     # str
                 'Nom',                      # str
@@ -82,6 +84,42 @@ dico_INDEX_VILLES={'Departement': 0,
                      'Latitude DMS': 24,
                      'Altitude min': 25,
                      'Altitude max': 26}
+
+
+
+def extract_ind_tel(fichcsv):
+    with open(fichcsv) as f:
+        recup = csv.reader(f, delimiter=';')
+        L = []
+        for row in recup:
+            L.append(row)
+    IND01 = []
+    IND02 = []
+    IND03 = []
+    IND04 = []
+    IND05 = []
+    for i in L:
+        if i[2] == '1':
+            IND01.append(i[0])
+        elif i[2] == '2':
+            IND02.append(i[0])
+        elif i[2] == '3':
+            IND03.append(i[0])
+        elif i[2] == '4':
+            IND04.append(i[0])
+        else :
+            IND05.append(i[0])
+    return IND01, IND02, IND03, IND04, IND05
+
+aa = extract_ind_tel('indicatifs_france.csv')
+
+INDICATIF_01 = aa[0]
+INDICATIF_02 = aa[1]
+INDICATIF_03 = aa[2]
+INDICATIF_04 = aa[3]
+INDICATIF_05 = aa[4]
+
+DEPARTEMENT = INDICATIF_01 + INDICATIF_02 + INDICATIF_03 + INDICATIF_04 + INDICATIF_05
 
 if __name__ == "__main":
     pass

@@ -1,7 +1,6 @@
 from Fonction1 import *
 import matplotlib.pyplot as plt
 import numpy as np
-import stat
 import statistics
 
 
