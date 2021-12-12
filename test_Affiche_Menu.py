@@ -4,6 +4,8 @@ Created on Thu Nov 25 13:55:50 2021
 
 @author: dcoqu
 """
+from etape1 import *
+
 
 def afficheMENU():
     print("taper 1: Extraire les Villes du fichier")

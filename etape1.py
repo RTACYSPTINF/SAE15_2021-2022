@@ -65,31 +65,31 @@ def extract_villes_depart_indicatif():
     f = open('IF01.txt', 'w')
     for i in liste_ville:
         if i[0] in INDICATIF_01:
-            f.write(i[1] + "\n")
+            f.write(i[0] + "   " + i[1] + "\n")
     f.close()
 
     f = open('NO02.txt', 'w')
     for i in liste_ville:
         if i[0] in INDICATIF_02:
-            f.write(i[1] + "\n")
+            f.write(i[0] + "   " + i[1] + "\n")
     f.close()
 
     f = open('NE03.txt', 'w')
     for i in liste_ville:
         if i[0] in INDICATIF_03:
-            f.write(i[1] + "\n")
+            f.write(i[0] + "   " + i[1] + "\n")
     f.close()
 
     f = open('SE04.txt', 'w')
     for i in liste_ville:
         if i[0] in INDICATIF_04:
-            f.write(i[1] + "\n")
+            f.write(i[0] + "   " + i[1] + "\n")
     f.close()
 
     f = open('SO05.txt', 'w')
     for i in liste_ville:
         if i[0] in INDICATIF_05:
-            f.write(i[1] + "\n")
+            f.write(i[0] + "   " + i[1] + "\n")
     f.close()
 
 
